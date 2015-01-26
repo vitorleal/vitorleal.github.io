@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author"              content="Vitor Leal">
+    <meta name="description"         content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+
+    <meta name="viewport"            content="width=device-width, initial-scale=1">
+    <meta property="og:url"          content="http://vitorleal.com">
+    <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
+    <meta property="og:title"        content="Rodando Ubuntu na Beaglebone Black">
+    <meta property="og:description"  content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:type"         content="blog">
+
+    <meta name="twitter:card"        content="summary">
+    <meta name="twitter:creator"     content="@vitorleal">
+    <meta name="twitter:site"        content="@vitorleal">
+    <meta name="twitter:domain"      content="http://vitorleal.com">
+    <meta name="twitter:title"       content="Rodando Ubuntu na Beaglebone Black">
+    <meta name="twitter:description" content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+
+    <link href="http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <section class="container">
+      <aside class="left">
+  <div class="inner-left">
+    <header>
+  <img src="../assets/img/vitorleal.jpg" alt="Vitor Leal" title="Vitor Leal" class="profilepic" />
+
+  <hgroup>
+    <h1>
+      <a href="/">Vitor Leal</a>
+    </h1>
+    <h2 class="subtitle">Full-Stack Developer</h2>
+  </hgroup>
+</header>
+
+
+    <ul class="main-navigation">
+  
+  <li>
+    <a class="btn btn-dark " href="../blog">Blog</a>
+  </li>
+  
+  <li>
+    <a class="btn btn-dark " href="../projetos">Projetos</a>
+  </li>
+  
+  <li>
+    <a class="btn btn-dark " href="../talks">Talks</a>
+  </li>
+  
+</ul>
+
+<fieldset class="mobile-nav">
+  <select>
+    <option value="">Menu…</option>
+    
+    <option value="../blog">» Blog</option>
+    
+    <option value="../projetos">» Projetos</option>
+    
+    <option value="../talks">» Talks</option>
+    
+  </select>
+</fieldset>
+
+
+    <footer>
+  <p>
+    
+    <a href="http://github.com/vitorleal" class="btn btn-dark">GitHub</a>
+    
+
+    
+    <a href="http://www.linkedin.com/in/vitorleal" class="btn btn-dark">LinkedIn</a>
+    
+  </p>
+</footer>
+
+  </div>
+</aside>
+
+
+      <article class="right">
+        <div class="inner-right">
+          
+          
+
+<header>
+  <h1 class="entry-title">Rodando Ubuntu na Beaglebone Black</h1>
+  <p class="meta">
+    <time datetime="2014-04-08 09:48" pubdate>
+      
+      8/4/2014
+    </time>
+  </p>
+</header>
+
+<p><img src="http://vitorleal.com/assets/img/blog/beaglebone-black.jpg" alt="Rodando Ubuntu na Beaglebone Black" title="Rodando Ubuntu na Beaglebone Black"></p>
+<p>A Beaglebone Black vem com a sersão do Linux chamada <a href="http://beagleboard.org/latest-images">Angstrom</a> instalada na memória flash
+de 2GB. Eu vou mostrar os passos necessários para rodar Ubuntu (no meu caso a versão <strong>13.04</strong>) na sua Beaglebone Black.</p>
+<p>É importante utilizar uma versão do Ubuntu que seja compatível com a Beaglebone Black a não ser que você seja fera no Kernel do Linux.</p>
+<p>Eu estou utilizando um Mac para realizar este processo, mas também pode ser fetio em Linux ou Windows.</p>
+<h2>Faça o download da imagem</h2>
+<ol>
+<li>Baixe a versão do <a href="http://s3.armhf.com/debian/raring/bone/ubuntu-raring-13.04-armhf-3.8.13-bone20.img.xz">Ubuntu para Beaglebone</a></li>
+<li>Depois faça o download do aplicativo <a href="https://itunes.apple.com/app/the-unarchiver/id425424353">The Unarchiver</a>
+ou se estiver utilizando Linux <code>$ sudo apt-get install xz</code></li>
+<li>Depois de descompactar o arquivo <strong>.xz</strong> você vai ter um arquivo <strong>.img</strong></li>
+</ol>
+<h2>Formate seu SD Card</h2>
+<p>Para este passo você vai ter que utilizar um SD card de no mínimo <strong>2GB</strong></p>
+<ol>
+<li>Insira o SD card no leitor de cartões do seu note</li>
+<li>Abra o aplicativo Disk Utility, selecione o SD card na lateral esquerda e a tab no topo direito</li>
+<li>Clique no botão Apagar e formate o SD card</li>
+</ol>
+<p><img src="http://vitorleal.com/assets/img/blog/format-sdcard.png" alt="Formatando seu SD card no Mac" title="Formatando seu SD card no Mac"></p>
+<h2>Escreva a imagem no SD Card</h2>
+<ol>
+<li>Pegue o nome do SD Card <code>diskutil list</code></li>
+<li>No meu caso o meu SD Card é <strong>disk1</strong></li>
+<li>Execute o comando de <strong>unmount</strong> para que a gente possa sobrescrever o cartão
+<code>diskutil unmountDisk /dev/disk2</code></li>
+<li>Agora podemos escrever a imagem do Ubuntu no nosso SD Card
+<code>sudo dd if=/Caminho/da/sea/imagem/ubuntu-raring-13.04-armhf-3.8.13-bone20.img of=/dev/disk2 bs=1m</code></li>
+<li>Agora espere até que termine de montar a imagem no seu SD Card. <strong>Dica: vai tomar um café que pode demorar um pouco</strong></li>
+</ol>
+<h2>Rodando o Ubuntu no SD Card</h2>
+<p>Agora vamos inserir o SD Card na nossa Beaglebone Black, lembre que ela deve estar desligada para o início do processo.</p>
+<ol>
+<li>Insira o SD Card na Beaglebone Black enaquanto ela esta <strong>desligada</strong></li>
+<li>Mantenha o botão <strong>USER/BOOT</strong> pressionado (o botão é o mais perto do slot de SD Card)</li>
+<li>Ligue o cabo de envergia 5V (o cabo usb não deve funcionar)</li>
+<li>Quando as luzes começarem a piscar pode soltar o botão</li>
+<li>Depois de um minuto você vai ver a tela de login</li>
+<li>Utiliza o login <strong>ubuntu</strong> e senha <strong>ubuntu</strong></li>
+</ol>
+<p>Pronto agora você já tem uma Breaglebone Black rodando Ubuntu e já pode comaçar a programar!</p>
+
+
+
+
+<h3>Deixe seu comentário</h3>
+<article id="disqus_thread"></article>
+
+<script>
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//vitorleal.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+          
+
+          <footer id="footer">
+  <p class="credit">Copyright &copy; 2015 - Vitor Leal</p>
+</footer>
+
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

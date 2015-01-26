@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="author"              content="Vitor Leal">
+    <meta name="description"         content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+
+    <meta name="viewport"            content="width=device-width, initial-scale=1">
+    <meta property="og:url"          content="http://vitorleal.com">
+    <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
+    <meta property="og:title"        content="Instalando Node.js latest na Raspberry Pi">
+    <meta property="og:description"  content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:type"         content="blog">
+
+    <meta name="twitter:card"        content="summary">
+    <meta name="twitter:creator"     content="@vitorleal">
+    <meta name="twitter:site"        content="@vitorleal">
+    <meta name="twitter:domain"      content="http://vitorleal.com">
+    <meta name="twitter:title"       content="Instalando Node.js latest na Raspberry Pi">
+    <meta name="twitter:description" content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+
+    <link href="http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <section class="container">
+      <aside class="left">
+  <div class="inner-left">
+    <header>
+  <img src="../assets/img/vitorleal.jpg" alt="Vitor Leal" title="Vitor Leal" class="profilepic" />
+
+  <hgroup>
+    <h1>
+      <a href="/">Vitor Leal</a>
+    </h1>
+    <h2 class="subtitle">Full-Stack Developer</h2>
+  </hgroup>
+</header>
+
+
+    <ul class="main-navigation">
+  
+  <li>
+    <a class="btn btn-dark " href="../blog">Blog</a>
+  </li>
+  
+  <li>
+    <a class="btn btn-dark " href="../projetos">Projetos</a>
+  </li>
+  
+  <li>
+    <a class="btn btn-dark " href="../talks">Talks</a>
+  </li>
+  
+</ul>
+
+<fieldset class="mobile-nav">
+  <select>
+    <option value="">Menu…</option>
+    
+    <option value="../blog">» Blog</option>
+    
+    <option value="../projetos">» Projetos</option>
+    
+    <option value="../talks">» Talks</option>
+    
+  </select>
+</fieldset>
+
+
+    <footer>
+  <p>
+    
+    <a href="http://github.com/vitorleal" class="btn btn-dark">GitHub</a>
+    
+
+    
+    <a href="http://www.linkedin.com/in/vitorleal" class="btn btn-dark">LinkedIn</a>
+    
+  </p>
+</footer>
+
+  </div>
+</aside>
+
+
+      <article class="right">
+        <div class="inner-right">
+          
+          
+
+<header>
+  <h1 class="entry-title">Instalando Node.js latest na Raspberry Pi</h1>
+  <p class="meta">
+    <time datetime="2014-07-08 010:20" pubdate>
+      
+      8/7/2014
+    </time>
+  </p>
+</header>
+
+<p><img src="http://vitorleal.com/assets/img/blog/raspberry-nodejs.jpg" alt="Instalando Node.js latest na Raspberry Pi" title="Instalando Node.js latest na Raspberry Pi"></p>
+<p>Vou mostrar como instalar o <a href="http://nodejs.org">Node.js</a> latest (no meu caso a <strong>v0.10.29</strong>) na <a href="http://www.raspberrypi.org">Raspberry Pi</a> de forma bem simples.</p>
+<h2>Instalando a versão antiga (0.6)</h2>
+<p>A versão que está disponibilizada no apt-get por padrão é muito antiga, muito antiga mesmo. É a versão <strong>0.6</strong></p>
+<p>Para instalar esta versão basta executar o comando:</p>
+<pre><code>apt-get install nodejs</code></pre>
+<h2>Instalando o Node.js Latest (0.10.*)</h2>
+<h5>Primeiro vamos fazer o download do <strong>tar.gz</strong> do Node.js latest:</h5>
+<pre><code>wget http://nodejs.org/dist/node-latest.tar.gz</code></pre>
+<h5>Agora vamos descompactar o arquivo:</h5>
+<pre><code>tar -xzf node-latest.tar.gz</code></pre>
+<h5>Mudamos para a o direório descompactado:</h5>
+<pre><code>cd node-latest.tar</code></pre>
+<h5>Vamos configurar o Node.js</h5>
+<pre><code>./configure</code></pre>
+<h5>Agora vamos fazer a instalação</h5>
+<p><strong>Dica</strong>: <em>Vai tomar um café, ou almoçar porque vai demorar bastante, bastante mesmo</em></p>
+<pre><code>make &amp;&amp; sudo make install</code></pre>
+<h2>Testando a versão do Node.js e do NPM</h2>
+<p>Para verificar a versão do Node.js basta executar o comando:</p>
+<pre><code>node -v</code></pre>
+<p>deve responder algo como <strong>v0.10.29</strong></p>
+<pre><code>npm -v</code></pre>
+<p>deve responder algo como <strong>1.5.0-alpha-1</strong></p>
+<hr>
+<p>Pronto agora você já tem a última versão do <strong>Node.js</strong> instalado na sua <strong>Raspberry Pi</strong> e você já pode começar a programar!</p>
+
+
+
+
+<h3>Deixe seu comentário</h3>
+<article id="disqus_thread"></article>
+
+<script>
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//vitorleal.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+          
+
+          <footer id="footer">
+  <p class="credit">Copyright &copy; 2015 - Vitor Leal</p>
+</footer>
+
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
