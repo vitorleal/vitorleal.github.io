@@ -1,0 +1,18 @@
+{
+  "index": {
+    "base": "../",
+    "menu": [{
+      "title": "Blog",
+      "link": "blog",
+      "active": false
+    }, {
+      "title": "Projetos",
+      "link": "projetos",
+      "active": true
+    }, {
+      "title": "Talks",
+      "link": "talks",
+      "active": false
+    }]
+  }
+}

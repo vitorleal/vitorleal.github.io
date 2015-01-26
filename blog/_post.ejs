@@ -1,0 +1,19 @@
+<% var post = public.blog._data[source] %>
+
+<header>
+  <h1 class="entry-title"><%= title %></h1>
+  <p class="meta">
+    <time datetime="<%= post.date %>" pubdate>
+      <% var date = new Date(post.date); %>
+      <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
+    </time>
+  </p>
+</header>
+
+<%- yield %>
+
+<% if (post.speakerdeck) { %>
+<%- partial("../partials/_speakerdeck", { id: post.speakerdeck }) %>
+<% } %>
+
+<%- partial("../partials/_disqus") %>

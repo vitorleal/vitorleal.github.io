@@ -1,0 +1,29 @@
+<header>
+  <h1 class="entry-title">Blog</h1>
+</header>
+
+<div id="blog-archives">
+  <% var data = public.blog._data; var posts = Object.keys(data); posts.shift(); %>
+  <% posts.forEach(function (post) { %>
+  <article>
+    <time datetime="<%= data[post].date %>" pubdate>
+      <% var date = new Date(data[post].date); %>
+      <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
+    </time>
+
+    <h1>
+      <a href="/blog/<%= post %>"><%= data[post].title %></a>
+    </h1>
+
+    <% if (data[post].img) { %>
+    <a href="/blog/<%= post %>" title="<%= data[post].title %>"><img src="<%= data[post].img %>" alt="<%= data[post].title %>"></a>
+    <% } %>
+
+    <% if (data[post].categories) { %>
+    <footer>
+      <span class="categories"><%= data[post].categories.join(", ") %></span>
+    </footer>
+    <% } %>
+  </article>
+  <% }); %>
+</div>
