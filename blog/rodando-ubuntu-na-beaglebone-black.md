@@ -1,4 +1,4 @@
-![Rodando Ubuntu na Beaglebone Black](/assets/img/blog/beaglebone-black.jpg "Rodando Ubuntu na Beaglebone Black")
+![Rodando Ubuntu na Beaglebone Black](http://vitorleal.com/assets/img/blog/beaglebone-black.jpg "Rodando Ubuntu na Beaglebone Black")
 
 A Beaglebone Black vem com a sersão do Linux chamada [Angstrom](http://beagleboard.org/latest-images) instalada na memória flash
 de 2GB. Eu vou mostrar os passos necessários para rodar Ubuntu (no meu caso a versão **13.04**) na sua Beaglebone Black.
@@ -20,7 +20,7 @@ Para este passo você vai ter que utilizar um SD card de no mínimo **2GB**
   2. Abra o aplicativo Disk Utility, selecione o SD card na lateral esquerda e a tab no topo direito
   3. Clique no botão Apagar e formate o SD card
 
-![Formatando seu SD card no Mac](/assets/img/blog/format-sdcard.png "Formatando seu SD card no Mac")
+![Formatando seu SD card no Mac](http://vitorleal.com/assets/img/blog/format-sdcard.png "Formatando seu SD card no Mac")
 
 
 ##Escreva a imagem no SD Card

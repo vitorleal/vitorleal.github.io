@@ -2,16 +2,17 @@
 Um novo projeto promete revolucionar a maneira que desenvolvemos soluções para o mercado de Internet of Things.
 O [WeIO](http://www.we-io.net/) é o mais novo [Open Hardware](http://en.wikipedia.org/wiki/Open_source_hardware) do mercado.
 
-![WeIO - O Hardware para a Web of Things](/assets/img/blog/img/weio-1.jpg "WeIO - O Hardware para a Web of Things")
+![WeIO - O Hardware para a Web of Things](http://vitorleal.com/assets/img/blog/img/weio-1.jpg "WeIO - O Hardware para a Web of Things")
 
 #IDE totalmente web
 O principal diferencial do **WeIO** é a a interface de desinvolvimento (*IDE*) completamente desenvolvida em tecnologias web (HTML5, CSS3, JavaScript).
-![WeIO - Web IDE](/assets/img/blog/img/weio-3.jpg "WeIO - Web IDE")
+
+![WeIO - Web IDE](http://vitorleal.com/assets/img/blog/img/weio-3.jpg "WeIO - Web IDE")
 
 Com essa *IDE* o desenvolvedor consegue criar aplicações de maneira rápida e fácil utilizando *[jQuery](http://jquery.com/)* e *[Bootstrap](http://getbootstrap.com/)*
 e o hardware ainda pode ser controlado pelo celular com poucas linhas de código.
 
-![WeIO - Controle seu hardware usando seu celular](/assets/img/blog/img/weio-2.png "WeIO - Controle seu hardware usando seu celular")
+![WeIO - Controle seu hardware usando seu celular](http://vitorleal.com/assets/img/blog/img/weio-2.png "WeIO - Controle seu hardware usando seu celular")
 
 Para desenvolver na *IDE* pode ser usado tanto **Python** como **JavaScript**, mas com certeza com o apoio da comunidade Open Source e Open Hardware o número de linguagens
 suportadas vai subir bastante.
@@ -32,7 +33,7 @@ As conexões físicas são:
 * 1 termômetro (LM75)
 * 1 LED RGB
 
-![WeIO - Hardware](/assets/img/blog/img/weio-4.jpg "WeIO - Hardware")
+![WeIO - Hardware](http://vitorleal.com/assets/img/blog/img/weio-4.jpg "WeIO - Hardware")
 
 #Open Source
 O projeto pode ser encontrado no repositório aberto no [GitHub](https://github.com/nodesign/weio).

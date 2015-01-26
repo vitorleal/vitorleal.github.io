@@ -12,11 +12,11 @@
     </time>
 
     <h1>
-      <a href="/blog/<%= post %>"><%= data[post].title %></a>
+      <a href="<%= base %>blog/<%= post %>"><%= data[post].title %></a>
     </h1>
 
     <% if (data[post].img) { %>
-    <a href="/blog/<%= post %>" title="<%= data[post].title %>"><img src="<%= data[post].img %>" alt="<%= data[post].title %>"></a>
+    <a href="<%= base %>blog/<%= post %>" title="<%= data[post].title %>"><img src="<%= base %><%= data[post].img %>" alt="<%= data[post].title %>"></a>
     <% } %>
 
     <% if (data[post].categories) { %>

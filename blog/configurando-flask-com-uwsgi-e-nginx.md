@@ -1,4 +1,4 @@
-![Configurando Flask no servidor](/assets/img/blog/flask-uwsgi-nginx.jpg "Configurando Flask com UWSGI e Nginx")
+![Configurando Flask no servidor](http://vitorleal.com/assets/img/blog/flask-uwsgi-nginx.jpg "Configurando Flask com UWSGI e Nginx")
 
 Neste post vou mostrar como configurar os serviços [UWSGI](https://github.com/unbit/uwsgi-docs) e [Nginx](http://nginx.com) em um servidor Ubuntu
  para rodar aplicações web utilizando o microframework de Python chamdo [Flask](http://flask.pocoo.org).

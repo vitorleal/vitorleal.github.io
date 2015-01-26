@@ -1,7 +1,7 @@
 <ul class="main-navigation">
   <% menu.forEach(function (item) { %>
   <li>
-    <a class="btn btn-dark <% if (item.active) { %>active<% } %>" href="/<%= item.link %>"><%= item.title %></a>
+    <a class="btn btn-dark <% if (item.active) { %>active<% } %>" href="<%= base %><%= item.link %>"><%= item.title %></a>
   </li>
   <% }); %>
 </ul>
@@ -10,7 +10,7 @@
   <select>
     <option value="">Menu…</option>
     <% menu.forEach(function (item) { %>
-    <option value="/<%= item.link %>">» <%= item.title %></option>
+    <option value="<%= base %><%= item.link %>">» <%= item.title %></option>
     <% }); %>
   </select>
 </fieldset>

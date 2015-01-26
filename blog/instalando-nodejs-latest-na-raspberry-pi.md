@@ -1,4 +1,4 @@
-![Instalando Node.js latest na Raspberry Pi](/assets/img/blog/raspberry-nodejs.jpg "Instalando Node.js latest na Raspberry Pi")
+![Instalando Node.js latest na Raspberry Pi](http://vitorleal.com/assets/img/blog/raspberry-nodejs.jpg "Instalando Node.js latest na Raspberry Pi")
 
 Vou mostrar como instalar o [Node.js](http://nodejs.org) latest (no meu caso a **v0.10.29**) na [Raspberry Pi](http://www.raspberrypi.org) de forma bem simples.
 
