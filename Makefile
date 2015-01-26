@@ -20,7 +20,7 @@ deploy:
 	$(call print, "Commit changes to Master pages")
 	git add .
 	git commit -m ":rocket: deploy website"
-	git push origin gh-pages
+	git push origin master
 
 	$(call print, "Go back to source")
 	git checkout source
