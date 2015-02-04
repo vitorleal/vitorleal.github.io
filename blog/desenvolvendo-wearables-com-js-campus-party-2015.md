@@ -3,4 +3,4 @@ Palestra na Campus Party 2015 sobre o [Kit IoT Wearable](http://iot.telefonicabe
 
 ###A documentação do Kit pode ser encontrada no GitHub:
   * Node.js [link](https://github.com/telefonicadigital/kit-iot-wearable-node)
-  * [Apache Cordova](https://github.com/telefonicadigital/kit-iot-wearable-cordova)
+  * Apache Cordova [link](https://github.com/telefonicadigital/kit-iot-wearable-cordova)
