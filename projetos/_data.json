@@ -1,6 +1,7 @@
 {
   "index": {
     "base": "../",
+    "title": "Projetos | Vitor Leal",
     "menu": [{
       "title": "Blog",
       "link": "blog",

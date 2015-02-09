@@ -1,6 +1,7 @@
 {
   "index": {
     "base": "../",
+    "title": "Blog | Vitor Leal",
     "menu": [{
       "title": "Blog",
       "link": "blog",
