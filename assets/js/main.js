@@ -10,4 +10,11 @@ var mobNav = function () {
 
 $('document').ready(function () {
   mobNav();
+
+  hljs.configure({
+    classPrefix: 'language-'
+  });
+  $('pre code').each(function (i, block) {
+    hljs.highlightBlock(block);
+  });
 });
