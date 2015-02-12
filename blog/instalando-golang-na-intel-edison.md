@@ -64,8 +64,7 @@ Installed commands in /home/you/go/bin.
 Adicione o **Go** no PATH
 ```
 $ export GOROOT=/usr/root/go
-$ export GOPATH=$HOME/go
-$ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+$ export PATH=$PATH:$GOROOT/bin
 ```
 
 Pronto agora você pode começar a usar o **Go** dentro da sua Edison.
@@ -73,6 +72,18 @@ Pronto agora você pode começar a usar o **Go** dentro da sua Edison.
 
 ## Utilizando as GPIO's do Edison
 Para utilizar as GPIO's da Edison eu sugiro utilizar o [Gobot](http://gobot.io/). Ele possui um módulo para acessar as GPIO's de maneira rápida e fácil.
+
+Crie um arquivo **edison.go**:
+```
+$ touch edison.go
+```
+
+Instale os módulos **Go**:
+```
+$ go get -d -u github.com/hybridgroup/gobot/...
+```
+
+Insira o código:
 ```go
 package main
 
@@ -105,5 +116,10 @@ func main() {
   gbot.AddRobot(robot)
   gbot.Start()
 }")
+```
+
+Agora rode o código:
+```
+$ go run edison.go
 ```
 
