@@ -148,11 +148,15 @@ Installed commands in /home/you/go/bin.
 *** You need to add /home/you/go/bin to your $PATH. ***</code></pre>
 <p>Adicione o <strong>Go</strong> no PATH</p>
 <pre><code>$ export GOROOT=/usr/root/go
-$ export GOPATH=$HOME/go
-$ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin</code></pre>
+$ export PATH=$PATH:$GOROOT/bin</code></pre>
 <p>Pronto agora você pode começar a usar o <strong>Go</strong> dentro da sua Edison.</p>
 <h2>Utilizando as GPIO&#39;s do Edison</h2>
 <p>Para utilizar as GPIO&#39;s da Edison eu sugiro utilizar o <a href="http://gobot.io/">Gobot</a>. Ele possui um módulo para acessar as GPIO&#39;s de maneira rápida e fácil.</p>
+<p>Crie um arquivo <strong>edison.go</strong>:</p>
+<pre><code>$ touch edison.go</code></pre>
+<p>Instale os módulos <strong>Go</strong>:</p>
+<pre><code>$ go get -d -u github.com/hybridgroup/gobot/...</code></pre>
+<p>Insira o código:</p>
 <pre><code class="language-go">package main
 
 import (
@@ -184,6 +188,8 @@ func main() {
   gbot.AddRobot(robot)
   gbot.Start()
 }&quot;)</code></pre>
+<p>Agora rode o código:</p>
+<pre><code>$ go run edison.go</code></pre>
 
 
 
