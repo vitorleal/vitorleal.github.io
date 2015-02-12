@@ -1,7 +1,7 @@
 # Instalando Golang na Intel Edison
 Vamos ver os passos de como instalar [Go](http://golang.org/) na [Intel Edison](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html).
 
-## Intel Edson
+## Intel Edison
 A **Intel Edison** possui um processador Intel® Atom™dual core de **500 MHz** e um microcontrolador Intel® Quark™ MCU de 32 bits de 100 MHz. Ele suporta **40 portas GPIOs** e inclui LPDDR3 de 1 GB, 4GB EMMC, **WiFi** e **Bluetooth® Low Energy** em um módulo do tamanho aproximado de um selo.
 ![Instalando Golang na Intel Edison](../assets/img/blog/img/intel-edison-stamp.png "Instalando Golang na Intel Edison")
 
