@@ -2,6 +2,7 @@
   "index": {
     "base": "../",
     "title": "Talks | Vitor Leal",
+    "description": "Uma lista das palestras que ministrei",
     "menu": [{
       "title": "Blog",
       "link": "blog",

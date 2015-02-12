@@ -2,6 +2,7 @@
   "index": {
     "base": "../",
     "title": "Blog | Vitor Leal",
+    "description": "Lista de posts sobre programação, hardware, palestras, eventos, internet of things e outros interesses",
     "menu": [{
       "title": "Blog",
       "link": "blog",
