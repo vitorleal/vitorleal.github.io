@@ -70,6 +70,8 @@ $ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 Pronto agora você pode começar a usar o **Go** dentro da sua Edison.
 
+
+## Utilizando as GPIO's do Edison
 Para utilizar as GPIO's da Edison eu sugiro utilizar o [Gobot](http://gobot.io/). Ele possui um módulo para acessar as GPIO's de maneira rápida e fácil.
 ```go
 package main
