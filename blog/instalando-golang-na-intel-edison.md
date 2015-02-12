@@ -36,7 +36,7 @@ $ opkg install bash
 ```
 
 ### 3. Baixe o repositório do Go e execute a instalação
-Clone o repositório do Go no [GitHub](git clone https://go.googlesource.com/go)
+Clone o repositório do Go no [GitHub](https://go.googlesource.com/go)
 
 ```
 $ git clone https://go.googlesource.com/go
