@@ -1,4 +1,5 @@
 ## Como rodar Go na Intel Edison
+![Instalando Golang na Intel Edison](../assets/img/blog/img/gopher-intel-edison.png "Instalando Golang na Intel Edison")
 Vamos ver os passos de como instalar [Go](http://golang.org/) na [Intel Edison](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html).
 
 ## Intel Edison
