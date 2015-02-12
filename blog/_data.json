@@ -20,6 +20,7 @@
   "instalando-golang-na-intel-edison": {
     "base": "../",
     "title": "Instalando Golang na Intel Edison",
+    "description": "Vamos ver o passo a passo de como instalar Go na placa Intel Edson",
     "date": "2015-02-12 16:30",
     "categories": ["programacao", "go", "golang", "intel", "edison", "desenvolvimento"],
     "img": "/assets/img/blog/golang-intel-edson.png"
@@ -27,6 +28,7 @@
   "desenvolvendo-wearables-com-js-campus-party-2015": {
     "base": "../",
     "title": "Desenvolvendo Wearables com JS - Campus Party 2015",
+    "description": "Palestra na Campus Party 2015 de como desenvolver aplicação para o Kit IoT Wearable da Telefonica VIVO",
     "date": "2015-02-04 11:45",
     "categories": ["programacao", "talks", "campus-party", "nodejs", "IoT", "desenvolvimento", "wearables"],
     "img": "/assets/img/blog/vitor-leal-campus-party-2015.png",
@@ -35,6 +37,7 @@
   "curso-de-programacao-iot-com-nodejs-na-fiap": {
     "base": "../",
     "title": "Curso de desenvolvimento de aplicações em Node.js para Internet das Coisas",
+    "description": "Curso na FIAP focado em desenvolvimento de aplicações para Internet das Coisas",
     "date": "2014-09-24 10:20",
     "categories": ["programacao", "curso", "fiap", "nodejs", "IoT", "desenvolvimento"],
     "img": "/assets/img/blog/fiap-nodejs.jpg"
@@ -42,6 +45,7 @@
   "programacao-nao-e-um-bicho-de-7-megabits": {
     "base": "../",
     "title": "Programação não é um bicho de 7 megabits",
+    "description": "Palestra sobre desenvolvimento para não desenvolvedores realizada no evento RIA",
     "date": "2014-08-27 14:30",
     "categories": ["talks", "programacao", "desenvolvimento"],
     "img": "/assets/img/blog/bicho-7-megabits.jpg",
@@ -50,13 +54,15 @@
   "weio-hardware-para-a-web-of-things": {
     "base": "../",
     "title": "WeIO - O Hardware para a Web of Things",
+    "description": "Vamos entender um pouco mais sobre a nova placa WeIO",
     "date": "2014-08-25 23:10",
-    "categories": ["IoT"],
+    "categories": ["IoT", "hardware"],
     "img": "/assets/img/blog/weio.jpg"
   },
   "internet-of-things-com-nodejs-google-developer-group-devfest-sul": {
     "base": "../",
     "title": "Internet of Things com Node.JS - Google Developer Groups - DevFest Sul",
+    "description": "Palestra no GDG Sul sobre desenvolvimento para Internet of Things com Node.js",
     "date": "2014-08-23 14:30",
     "categories": ["talks", "nodejs", "IoT", "gdg", "arduino", "raspberrypi"],
     "img": "/assets/img/blog/iot-nodejs-gdg-devfest-sul.jpg",
