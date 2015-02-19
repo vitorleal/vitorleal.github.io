@@ -62,7 +62,7 @@ Installed commands in /home/you/go/bin.
 *** You need to add /home/you/go/bin to your $PATH. ***
 ```
 
-Adicione o **Go** no PATH
+Adicione o **GOROOT** ao **PATH**
 ```
 $ export GOROOT=/home/root/go
 $ export GOPATH=/usr/root/go
