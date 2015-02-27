@@ -1,7 +1,9 @@
-.PHONY: deploy clean
+.PHONY: deploy clean new
 
 print = @echo "=> $(1)"\
 				"\n-----------------------"
+
+createPost = @cp "./blog/_template.md" "./blog/$(strip $(1)).md"
 
 deploy:
 	make clean
@@ -27,3 +29,11 @@ deploy:
 
 clean:
 	rm -rf www
+
+new:
+ifeq ($(post),)
+	@echo Qual nome do novo post? Ex: make new post=meu-novo-post
+else
+	$(call print, "Novo post: $(post)")
+	$(call createPost, $(post))
+endif
