@@ -3,7 +3,7 @@
 <header>
   <h1 class="entry-title"><%= title %></h1>
   <p class="meta">
-    <time datetime="<%= post.date %>" pubdate>
+  <time datetime="<%= post.date %>" pubdate="<%= post.pubdate %>">
       <% var date = new Date(post.date); %>
       <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
     </time>

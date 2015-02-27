@@ -1,6 +1,6 @@
 ![Instalando Node.js latest na Raspberry Pi](http://vitorleal.com/assets/img/blog/raspberry-nodejs.jpg "Instalando Node.js latest na Raspberry Pi")
 
-Vou mostrar como instalar o [Node.js](http://nodejs.org) latest (no meu caso a **v0.10.29**) na [Raspberry Pi](http://www.raspberrypi.org) de forma bem simples.
+Vou mostrar como instalar o [Node.js](http://nodejs.org) latest (no meu caso a **v0.12**) na [Raspberry Pi](http://www.raspberrypi.org) de forma bem simples.
 
 ##Instalando a versão antiga (0.6)
 A versão que está disponibilizada no apt-get por padrão é muito antiga, muito antiga mesmo. É a versão **0.6**
@@ -10,32 +10,16 @@ Para instalar esta versão basta executar o comando:
 apt-get install nodejs
 ```
 
-##Instalando o Node.js Latest (0.10.*)
+##Instalando o Node.js Latest (0.12.*)
 
 #####Primeiro vamos fazer o download do **tar.gz** do Node.js latest:
 ```
-wget http://nodejs.org/dist/node-latest.tar.gz
+wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 ```
 
-#####Agora vamos descompactar o arquivo:
+#####Agora vamos iniciar a instalação:
 ```
-tar -xzf node-latest.tar.gz
-```
-
-#####Mudamos para a o direório descompactado:
-```
-cd node-latest.tar
-```
-
-#####Vamos configurar o Node.js
-```
-./configure
-```
-
-#####Agora vamos fazer a instalação
-**Dica**: *Vai tomar um café, ou almoçar porque vai demorar bastante, bastante mesmo*
-```
-make && sudo make install
+sudo dpkg -i node_latest_armhf.deb
 ```
 
 ##Testando a versão do Node.js e do NPM
@@ -43,12 +27,12 @@ Para verificar a versão do Node.js basta executar o comando:
 ```
 node -v
 ```
-deve responder algo como **v0.10.29**
+deve responder algo como **v0.12.xx**
 
 ```
 npm -v
 ```
-deve responder algo como **1.5.0-alpha-1**
+deve responder algo como **2.5.1**
 
 ***
 

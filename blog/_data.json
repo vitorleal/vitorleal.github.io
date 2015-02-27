@@ -18,6 +18,14 @@
     }]
   },
 
+  "instalando-nodejs-latest-na-raspberry-pi": {
+    "base": "../",
+    "title": "Instalando Node.js latest na Raspberry Pi",
+    "pubdate": "2014-07-08 10:20",
+    "date": "2015-02-26 21:20",
+    "categories": ["raspberrypi", "hardware", "makers", "nodejs"],
+    "img": "/assets/img/blog/raspberry-nodejs.jpg"
+  },
   "instalando-golang-na-intel-edison": {
     "base": "../",
     "title": "Instalando Golang na Intel Edison",
@@ -83,13 +91,6 @@
     "categories": ["nodejs", "IoT", "arduino", "talks", "campus-party"],
     "img": "/assets/img/blog/iot-campus-party.jpg",
     "speakerdeck": "1c4ffd70f66301318ea7322b93b4e98e"
-  },
-  "instalando-nodejs-latest-na-raspberry-pi": {
-    "base": "../",
-    "title": "Instalando Node.js latest na Raspberry Pi",
-    "date": "2014-07-08 010:20",
-    "categories": ["raspberrypi", "hardware", "makers", "nodejs"],
-    "img": "/assets/img/blog/raspberry-nodejs.jpg"
   },
   "internet-of-things-com-nodejs-iot-day": {
     "base": "../",
