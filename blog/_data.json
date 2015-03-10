@@ -18,6 +18,13 @@
     }]
   },
 
+  "bluetooth-debugging-no-android-wear": {
+    "base": "../",
+    "title": "Bluetooth Debugging no Android Wear",
+    "date": "2015-03-10 00:20",
+    "categories": ["android", "wear", "wearable", "bluetooth", "debug", "adb", "desenvolvimento"],
+    "img": "/assets/img/blog/android-wear.jpg"
+  },
   "autocomplete-input-html5-sem-jquery": {
     "base": "../",
     "title": "Autocomplete nativo do HTML5 sem usar jQuery",
