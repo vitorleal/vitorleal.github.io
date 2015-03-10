@@ -76,14 +76,14 @@ Agora podemos listar todos os APPs instalados no **moto360**.
 shell@minnow:/ $ pm list packages
 ```
 
+### Para desinstalar um aplicativo do seu Android Wear
+```
+$ pm uninstall [package_name]
+```
+
 Para sair basta usar o comando **exit**.
 ```
 shell@minnow:/ $ exit
-```
-
-### Para desinstalar um aplicativo do seu Android Wear
-```
-$ adb -s localhost: 4444 uninstall [package_name]
 ```
 
 
