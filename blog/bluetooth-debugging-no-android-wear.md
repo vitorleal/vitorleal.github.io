@@ -66,4 +66,25 @@ $ adb -s localhost:4444 pull /sdcard/DCIM/
 $ adb -s localhost:4444 shell rm /sdcard/DCIM/screen.png
 ```
 
+### Conectar na shell do Android Wear
+```
+$ adb -s localhost:4444 shell
+```
+
+Agora podemos listar todos os APPs instalados no **moto360**.
+```
+shell@minnow:/ $ pm list packages
+```
+
+Para sair basta usar o comando **exit**.
+```
+shell@minnow:/ $ exit
+```
+
+### Para desinstalar um aplicativo do seu Android Wear
+```
+$ adb -s localhost: 4444 uninstall [package_name]
+```
+
+
 Pronto agora você já pode começar a cirar sua aplicação para o Android Wear!
