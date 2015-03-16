@@ -18,6 +18,13 @@
     }]
   },
 
+  "google-maps-v2-no-android": {
+    "base": "../",
+    "title": "Google maps V2 no Android",
+    "date": "2015-03-16 16:30",
+    "categories": ["android", "google maps", "maps", "desenvolvimento"],
+    "img": "/assets/img/blog/android-maps.png"
+  },
   "bluetooth-debugging-no-android-wear": {
     "base": "../",
     "title": "Bluetooth Debugging no Android Wear",
