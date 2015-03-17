@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Rodando Ubuntu na Beaglebone Black</title>
     <meta name="author"              content="Vitor Leal">
-    <meta name="description"         content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="description"         content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
 
     <meta name="viewport"            content="width=device-width, initial-scale=1">
     <meta property="og:url"          content="http://vitorleal.com">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
     <meta property="og:title"        content="Rodando Ubuntu na Beaglebone Black">
-    <meta property="og:description"  content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:description"  content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:type"         content="blog">
 
     <meta name="twitter:card"        content="summary">
@@ -18,7 +18,7 @@
     <meta name="twitter:site"        content="@vitorleal">
     <meta name="twitter:domain"      content="http://vitorleal.com">
     <meta name="twitter:title"       content="Rodando Ubuntu na Beaglebone Black">
-    <meta name="twitter:description" content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="twitter:description" content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
 
     <link href="../assets/img/favicon.png"                                        rel="icon">
@@ -122,23 +122,20 @@
 de 2GB. Eu vou mostrar os passos necessários para rodar Ubuntu (no meu caso a versão <strong>13.04</strong>) na sua Beaglebone Black.</p>
 <p>É importante utilizar uma versão do Ubuntu que seja compatível com a Beaglebone Black a não ser que você seja fera no Kernel do Linux.</p>
 <p>Eu estou utilizando um Mac para realizar este processo, mas também pode ser fetio em Linux ou Windows.</p>
-<h2>Faça o download da imagem</h2>
-<ol>
+<h2>Faça o download da imagem</h2><ol>
 <li>Baixe a versão do <a href="http://s3.armhf.com/debian/raring/bone/ubuntu-raring-13.04-armhf-3.8.13-bone20.img.xz">Ubuntu para Beaglebone</a></li>
 <li>Depois faça o download do aplicativo <a href="https://itunes.apple.com/app/the-unarchiver/id425424353">The Unarchiver</a>
 ou se estiver utilizando Linux <code>$ sudo apt-get install xz</code></li>
 <li>Depois de descompactar o arquivo <strong>.xz</strong> você vai ter um arquivo <strong>.img</strong></li>
 </ol>
-<h2>Formate seu SD Card</h2>
-<p>Para este passo você vai ter que utilizar um SD card de no mínimo <strong>2GB</strong></p>
+<h2>Formate seu SD Card</h2><p>Para este passo você vai ter que utilizar um SD card de no mínimo <strong>2GB</strong></p>
 <ol>
 <li>Insira o SD card no leitor de cartões do seu note</li>
 <li>Abra o aplicativo Disk Utility, selecione o SD card na lateral esquerda e a tab no topo direito</li>
 <li>Clique no botão Apagar e formate o SD card</li>
 </ol>
 <p><img src="http://vitorleal.com/assets/img/blog/format-sdcard.png" alt="Formatando seu SD card no Mac" title="Formatando seu SD card no Mac"></p>
-<h2>Escreva a imagem no SD Card</h2>
-<ol>
+<h2>Escreva a imagem no SD Card</h2><ol>
 <li>Pegue o nome do SD Card <code>diskutil list</code></li>
 <li>No meu caso o meu SD Card é <strong>disk1</strong></li>
 <li>Execute o comando de <strong>unmount</strong> para que a gente possa sobrescrever o cartão
@@ -147,8 +144,7 @@ ou se estiver utilizando Linux <code>$ sudo apt-get install xz</code></li>
 <code>sudo dd if=/Caminho/da/sea/imagem/ubuntu-raring-13.04-armhf-3.8.13-bone20.img of=/dev/disk2 bs=1m</code></li>
 <li>Agora espere até que termine de montar a imagem no seu SD Card. <strong>Dica: vai tomar um café que pode demorar um pouco</strong></li>
 </ol>
-<h2>Rodando o Ubuntu no SD Card</h2>
-<p>Agora vamos inserir o SD Card na nossa Beaglebone Black, lembre que ela deve estar desligada para o início do processo.</p>
+<h2>Rodando o Ubuntu no SD Card</h2><p>Agora vamos inserir o SD Card na nossa Beaglebone Black, lembre que ela deve estar desligada para o início do processo.</p>
 <ol>
 <li>Insira o SD Card na Beaglebone Black enaquanto ela esta <strong>desligada</strong></li>
 <li>Mantenha o botão <strong>USER/BOOT</strong> pressionado (o botão é o mais perto do slot de SD Card)</li>
@@ -158,7 +154,6 @@ ou se estiver utilizando Linux <code>$ sudo apt-get install xz</code></li>
 <li>Utiliza o login <strong>ubuntu</strong> e senha <strong>ubuntu</strong></li>
 </ol>
 <p>Pronto agora você já tem uma Breaglebone Black rodando Ubuntu e já pode comaçar a programar!</p>
-
 
 
 

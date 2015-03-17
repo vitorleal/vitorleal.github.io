@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Bluetooth Debugging no Android Wear</title>
     <meta name="author"              content="Vitor Leal">
-    <meta name="description"         content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="description"         content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
 
     <meta name="viewport"            content="width=device-width, initial-scale=1">
     <meta property="og:url"          content="http://vitorleal.com">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
     <meta property="og:title"        content="Bluetooth Debugging no Android Wear">
-    <meta property="og:description"  content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:description"  content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:type"         content="blog">
 
     <meta name="twitter:card"        content="summary">
@@ -18,7 +18,7 @@
     <meta name="twitter:site"        content="@vitorleal">
     <meta name="twitter:domain"      content="http://vitorleal.com">
     <meta name="twitter:title"       content="Bluetooth Debugging no Android Wear">
-    <meta name="twitter:description" content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="twitter:description" content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
 
     <link href="../assets/img/favicon.png"                                        rel="icon">
@@ -117,55 +117,43 @@
   </p>
 </header>
 
-<h2>Bluetooth debugging no Android Wear</h2>
-<p><img src="../assets/img/blog/android-wear.jpg" alt="Bluetooth debugging no Android Wear" title="Bluetooth debugging no Android Wear"></p>
+<h2>Bluetooth debugging no Android Wear</h2><p><img src="../assets/img/blog/android-wear.jpg" alt="Bluetooth debugging no Android Wear" title="Bluetooth debugging no Android Wear"></p>
 <p>Vamos ver os passos para poder conectar um <a href="https://moto360.motorola.com/">Moto360</a> no seu computador para podre desenolver aplicações.</p>
-<h2>Ligar o Debugging over Bluetooth no Android Wear</h2>
-<p>Vá no seu <strong>Android Wear</strong> e clique em  <strong>Settings</strong> &gt; <strong>Developer Options</strong> e habilite as opções <strong>ADB Debugging</strong> e <strong>Debug Over Bluetooth</strong>.</p>
+<h2>Ligar o Debugging over Bluetooth no Android Wear</h2><p>Vá no seu <strong>Android Wear</strong> e clique em  <strong>Settings</strong> &gt; <strong>Developer Options</strong> e habilite as opções <strong>ADB Debugging</strong> e <strong>Debug Over Bluetooth</strong>.</p>
 <p><img src="../assets/img/blog/img/android-wear-debugging.png" alt="Android Wear Settings" title="Android Wear Settings"></p>
-<h2>Conecte e habilte o USB Debugging no seu Celular Android</h2>
-<p>Conecte seu celular com o cabo USB ao computador a vá em <strong>Android Mobile</strong> &gt; <strong>Developer Options</strong> e habilte a opção <strong>USB Debugging</strong>.</p>
+<h2>Conecte e habilte o USB Debugging no seu Celular Android</h2><p>Conecte seu celular com o cabo USB ao computador a vá em <strong>Android Mobile</strong> &gt; <strong>Developer Options</strong> e habilte a opção <strong>USB Debugging</strong>.</p>
 <p><img src="../assets/img/blog/img/android-settings.png" alt="Android Settings" title="Android Settings"></p>
 <p><img src="../assets/img/blog/img/android-settings-usb.png" alt="Android Setting USB debug" title="Android Setting USB debug"></p>
-<h2>Habilite o Debugging over Bluetooth no Celular Android</h2>
-<p>Abra o aplicativo <strong>Android Wear App</strong>, vá em <strong>Settings</strong> e habilete a opção <strong>Debugging Over Bluetooth</strong>.</p>
+<h2>Habilite o Debugging over Bluetooth no Celular Android</h2><p>Abra o aplicativo <strong>Android Wear App</strong>, vá em <strong>Settings</strong> e habilete a opção <strong>Debugging Over Bluetooth</strong>.</p>
 <p><img src="../assets/img/blog/img/android-wear-app.png" alt="Android Wear App" title="Android Wear App"></p>
 <p><img src="../assets/img/blog/img/android-wear-app-settings.png" alt="Android Wear App Settings" title="Android Wear App Settings"></p>
-<h2>Conecte o ADB ao seu Android Wear</h2>
-<ol>
+<h2>Conecte o ADB ao seu Android Wear</h2><ol>
 <li><p>Abra o aplicativo <strong>Terminal</strong></p>
 </li>
 <li><p>Verifique que seu Celular esta conectado usando o comando:</p>
-<pre><code>$ adb devices</code></pre>
-</li>
+<pre><code>$ adb devices
+</code></pre></li>
 <li><p>Agora conecte seu Android Wear (no meu caso o Moto 360) usando os comandos:</p>
 <pre><code>$ adb forward tcp:4444 localabstract:/adb-hub
-$ adb connect localhost:4444</code></pre>
-</li>
+$ adb connect localhost:4444
+</code></pre></li>
 <li><p>Verifique que seu Adnroid Wear está conectado. Abra o aplicativo <strong>Android Wear App</strong> e ele deve mostrar que o estatus esta conectado para o <strong>Host</strong> e para o <strong>Target</strong>.</p>
 <p><img src="../assets/img/blog/img/android-wear-app-settings-connected.png" alt="Android Wear App Settings" title="Android Wear App Settings"></p>
 </li>
 <li><p>Outra forma é rodando o comando <strong>adb devices</strong> novamente e deve aparecer o device <strong>localhost:4444</strong> que é o seu Android Wear.</p>
 </li>
 </ol>
-<h2>BONUS TIME</h2>
-<p>Vamos ver com otirar print-screens do nosso Android Wear device.</p>
-<h3>Tirar um print-screen</h3>
-<pre><code>$ adb -s localhost:4444 shell screencap -p /sdcard/DCIM/screen.png</code></pre>
-<h3>Mover o print-screen para o seu computador</h3>
-<pre><code>$ adb -s localhost:4444 pull /sdcard/DCIM/</code></pre>
-<h3>Apagar o print-screen que está no seu Android Wear Device</h3>
-<pre><code>$ adb -s localhost:4444 shell rm /sdcard/DCIM/screen.png</code></pre>
-<h3>Conectar na shell do Android Wear</h3>
-<pre><code>$ adb -s localhost:4444 shell</code></pre>
-<p>Agora podemos listar todos os APPs instalados no <strong>moto360</strong>.</p>
-<pre><code>shell@minnow:/ $ pm list packages</code></pre>
-<h3>Para desinstalar um aplicativo do seu Android Wear</h3>
-<pre><code>$ pm uninstall [package_name]</code></pre>
-<p>Para sair basta usar o comando <strong>exit</strong>.</p>
-<pre><code>shell@minnow:/ $ exit</code></pre>
-<p>Pronto agora você já pode começar a cirar sua aplicação para o Android Wear!</p>
-
+<h2>BONUS TIME</h2><p>Vamos ver com otirar print-screens do nosso Android Wear device.</p>
+<h3>Tirar um print-screen</h3><pre><code>$ adb -s localhost:4444 shell screencap -p /sdcard/DCIM/screen.png
+</code></pre><h3>Mover o print-screen para o seu computador</h3><pre><code>$ adb -s localhost:4444 pull /sdcard/DCIM/
+</code></pre><h3>Apagar o print-screen que está no seu Android Wear Device</h3><pre><code>$ adb -s localhost:4444 shell rm /sdcard/DCIM/screen.png
+</code></pre><h3>Conectar na shell do Android Wear</h3><pre><code>$ adb -s localhost:4444 shell
+</code></pre><p>Agora podemos listar todos os APPs instalados no <strong>moto360</strong>.</p>
+<pre><code>shell@minnow:/ $ pm list packages
+</code></pre><h3>Para desinstalar um aplicativo do seu Android Wear</h3><pre><code>$ pm uninstall [package_name]
+</code></pre><p>Para sair basta usar o comando <strong>exit</strong>.</p>
+<pre><code>shell@minnow:/ $ exit
+</code></pre><p>Pronto agora você já pode começar a cirar sua aplicação para o Android Wear!</p>
 
 
 

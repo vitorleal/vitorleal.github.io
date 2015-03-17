@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Configurando Flask com UWSGI e Nginx</title>
     <meta name="author"              content="Vitor Leal">
-    <meta name="description"         content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="description"         content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
 
     <meta name="viewport"            content="width=device-width, initial-scale=1">
     <meta property="og:url"          content="http://vitorleal.com">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
     <meta property="og:title"        content="Configurando Flask com UWSGI e Nginx">
-    <meta property="og:description"  content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:description"  content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:type"         content="blog">
 
     <meta name="twitter:card"        content="summary">
@@ -18,7 +18,7 @@
     <meta name="twitter:site"        content="@vitorleal">
     <meta name="twitter:domain"      content="http://vitorleal.com">
     <meta name="twitter:title"       content="Configurando Flask com UWSGI e Nginx">
-    <meta name="twitter:description" content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="twitter:description" content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
 
     <link href="../assets/img/favicon.png"                                        rel="icon">
@@ -120,23 +120,20 @@
 <p><img src="http://vitorleal.com/assets/img/blog/flask-uwsgi-nginx.jpg" alt="Configurando Flask no servidor" title="Configurando Flask com UWSGI e Nginx"></p>
 <p>Neste post vou mostrar como configurar os serviços <a href="https://github.com/unbit/uwsgi-docs">UWSGI</a> e <a href="http://nginx.com">Nginx</a> em um servidor Ubuntu
  para rodar aplicações web utilizando o microframework de Python chamdo <a href="http://flask.pocoo.org">Flask</a>.</p>
-<h2>O que é <a href="http://flask.pocoo.org">Flask</a></h2>
-<p>O Flask é um microframework para desenvolvimento web criado em Python. Super leve e compacto mas bem robusto e desenvolvido com ferramentas
+<h2>O que é <a href="http://flask.pocoo.org">Flask</a></h2><p>O Flask é um microframework para desenvolvimento web criado em Python. Super leve e compacto mas bem robusto e desenvolvido com ferramentas
  bem estáveis como a linguagem de templates para Python <a href="http://jinja.pocoo.org/docs">Jinja 2</a> e da biblioteca de <a href="http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">WSGI</a>
  para Ptyhon chamada <a href="http://werkzeug.pocoo.org">Werkzeug</a>.</p>
 <hr>
-<h2>Instalando o Nginx e o UWSGI no servidor</h2>
-<p>Para instalar o Ngin e o UWSGI vamos utilizar o <strong>apt-get</strong>.</p>
-<pre><code>$ apt-get install uwsgi uwsgi-plugin-python nginx</code></pre>
-<hr>
-<h2>Configurando o UWSGI</h2>
-<p>Primeiro vamos crair o arquivo de configuração do <strong>uwsgi</strong> do nosso nosso webapp.</p>
-<pre><code>$ touch /etc/uwsgi/apps-available/nosso-app.ini</code></pre>
-<p>Criamos um link simbólico do nosso arquvio de configuração na pasta <em>/etc/uwsgi/apps-enabled/*</em>.</p>
-<pre><code>$ ln -s /etc/uwsgi/apps-available/nosso-app.ini /etc/uwsgi/apps-enabled/nosso-app.ini</code></pre>
-<p>Criamos o arquivo <strong>.sock</strong></p>
-<pre><code>$ touch /tmp/nosso-app.sock</code></pre>
-<p>Agora vamos inserir os dados de configuração do nosso app.</p>
+<h2>Instalando o Nginx e o UWSGI no servidor</h2><p>Para instalar o Ngin e o UWSGI vamos utilizar o <strong>apt-get</strong>.</p>
+<pre><code>$ apt-get install uwsgi uwsgi-plugin-python nginx
+</code></pre><hr>
+<h2>Configurando o UWSGI</h2><p>Primeiro vamos crair o arquivo de configuração do <strong>uwsgi</strong> do nosso nosso webapp.</p>
+<pre><code>$ touch /etc/uwsgi/apps-available/nosso-app.ini
+</code></pre><p>Criamos um link simbólico do nosso arquvio de configuração na pasta <em>/etc/uwsgi/apps-enabled/*</em>.</p>
+<pre><code>$ ln -s /etc/uwsgi/apps-available/nosso-app.ini /etc/uwsgi/apps-enabled/nosso-app.ini
+</code></pre><p>Criamos o arquivo <strong>.sock</strong></p>
+<pre><code>$ touch /tmp/nosso-app.sock
+</code></pre><p>Agora vamos inserir os dados de configuração do nosso app.</p>
 <pre><code>[uwsgi]
 vhost      = true
 master     = true
@@ -150,16 +147,15 @@ processes  = 4
 threads    = 2
 http       = 0.0.0.0:5000           #ip e porta que vai rodar o app
 plugins    = python                 #plugin python do uwsgi que instalamos
-env        = ENV_VARIABLE=variable  #variaveis de ambiente</code></pre>
-<p>Já podemos reiniciar o nosso serviço <strong>uwsgi</strong></p>
-<pre><code>$ sudo service uwsgi restart</code></pre>
-<hr>
-<h2>Configurando o Nginx</h2>
-<p>Primeiro vamos crair o arquivo de configuração <strong>nginx</strong> do nosso webapp.</p>
-<pre><code>$ touch /etc/nginx/sites-available/nosso-app</code></pre>
-<p>Criamos um link simbólico do nosso arquvio de configuração na pasta <em>/etc/nginx/sites-enabled/*</em>.</p>
-<pre><code>$ ln -s /etc/nginx/sites-available/nosso-app /etc/nginx/sites-enabled/nosso-app</code></pre>
-<p>Agora vamos inserir as configuração do nginx</p>
+env        = ENV_VARIABLE=variable  #variaveis de ambiente
+</code></pre><p>Já podemos reiniciar o nosso serviço <strong>uwsgi</strong></p>
+<pre><code>$ sudo service uwsgi restart
+</code></pre><hr>
+<h2>Configurando o Nginx</h2><p>Primeiro vamos crair o arquivo de configuração <strong>nginx</strong> do nosso webapp.</p>
+<pre><code>$ touch /etc/nginx/sites-available/nosso-app
+</code></pre><p>Criamos um link simbólico do nosso arquvio de configuração na pasta <em>/etc/nginx/sites-enabled/*</em>.</p>
+<pre><code>$ ln -s /etc/nginx/sites-available/nosso-app /etc/nginx/sites-enabled/nosso-app
+</code></pre><p>Agora vamos inserir as configuração do nginx</p>
 <pre><code>server {
      listen 80; #roda na porta 80
      client_max_body_size 10m; #maximo upload de 10m
@@ -190,12 +186,10 @@ env        = ENV_VARIABLE=variable  #variaveis de ambiente</code></pre>
          gzip_http_version 1.1;
          gzip_disable      &quot;MSIE [1-6]\.(?!.*SV1)&quot;;
      }
-}</code></pre>
-<p>Agora podemos reiniciar o serviço <strong>nginx</strong></p>
-<pre><code>$ sudo service nginx restart</code></pre>
-<h2>Conclusão</h2>
-<p>Agora você pode acessar o ip ou dominio do seu servidor para ver o seu webapp rodando.</p>
-
+}
+</code></pre><p>Agora podemos reiniciar o serviço <strong>nginx</strong></p>
+<pre><code>$ sudo service nginx restart
+</code></pre><h2>Conclusão</h2><p>Agora você pode acessar o ip ou dominio do seu servidor para ver o seu webapp rodando.</p>
 
 
 

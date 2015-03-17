@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Instalando Node.js latest na Raspberry Pi</title>
     <meta name="author"              content="Vitor Leal">
-    <meta name="description"         content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="description"         content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
 
     <meta name="viewport"            content="width=device-width, initial-scale=1">
     <meta property="og:url"          content="http://vitorleal.com">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
     <meta property="og:title"        content="Instalando Node.js latest na Raspberry Pi">
-    <meta property="og:description"  content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta property="og:description"  content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:type"         content="blog">
 
     <meta name="twitter:card"        content="summary">
@@ -18,7 +18,7 @@
     <meta name="twitter:site"        content="@vitorleal">
     <meta name="twitter:domain"      content="http://vitorleal.com">
     <meta name="twitter:title"       content="Instalando Node.js latest na Raspberry Pi">
-    <meta name="twitter:description" content="Consultor de Sistemas e Negócios na área de inovação da Telefonica VIVO. Trabalho diariamente com NodeJS, JavaScript, HTML5/CSS3, Python, RaspberryPi e Arduino">
+    <meta name="twitter:description" content="Consultor de Sistemas e Negócios no Centro de Inovação da Telefonica VIVO.">
     <meta property="og:image"        content="http://vitorleal.com/assets/img/vitorleal.jpg">
 
     <link href="../assets/img/favicon.png"                                        rel="icon">
@@ -119,24 +119,18 @@
 
 <p><img src="http://vitorleal.com/assets/img/blog/raspberry-nodejs.jpg" alt="Instalando Node.js latest na Raspberry Pi" title="Instalando Node.js latest na Raspberry Pi"></p>
 <p>Vou mostrar como instalar o <a href="http://nodejs.org">Node.js</a> latest (no meu caso a <strong>v0.12</strong>) na <a href="http://www.raspberrypi.org">Raspberry Pi</a> de forma bem simples.</p>
-<h2>Instalando a versão antiga (0.6)</h2>
-<p>A versão que está disponibilizada no apt-get por padrão é muito antiga, muito antiga mesmo. É a versão <strong>0.6</strong></p>
+<h2>Instalando a versão antiga (0.6)</h2><p>A versão que está disponibilizada no apt-get por padrão é muito antiga, muito antiga mesmo. É a versão <strong>0.6</strong></p>
 <p>Para instalar esta versão basta executar o comando:</p>
-<pre><code>apt-get install nodejs</code></pre>
-<h2>Instalando o Node.js Latest (0.12.*)</h2>
-<h5>Primeiro vamos fazer o download do <strong>tar.gz</strong> do Node.js latest:</h5>
-<pre><code>wget http://node-arm.herokuapp.com/node_latest_armhf.deb</code></pre>
-<h5>Agora vamos iniciar a instalação:</h5>
-<pre><code>sudo dpkg -i node_latest_armhf.deb</code></pre>
-<h2>Testando a versão do Node.js e do NPM</h2>
-<p>Para verificar a versão do Node.js basta executar o comando:</p>
-<pre><code>node -v</code></pre>
-<p>deve responder algo como <strong>v0.12.xx</strong></p>
-<pre><code>npm -v</code></pre>
-<p>deve responder algo como <strong>2.5.1</strong></p>
+<pre><code>apt-get install nodejs
+</code></pre><h2>Instalando o Node.js Latest (0.12.*)</h2><h5>Primeiro vamos fazer o download do <strong>tar.gz</strong> do Node.js latest:</h5><pre><code>wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+</code></pre><h5>Agora vamos iniciar a instalação:</h5><pre><code>sudo dpkg -i node_latest_armhf.deb
+</code></pre><h2>Testando a versão do Node.js e do NPM</h2><p>Para verificar a versão do Node.js basta executar o comando:</p>
+<pre><code>node -v
+</code></pre><p>deve responder algo como <strong>v0.12.xx</strong></p>
+<pre><code>npm -v
+</code></pre><p>deve responder algo como <strong>2.5.1</strong></p>
 <hr>
 <p>Pronto agora você já tem a última versão do <strong>Node.js</strong> instalado na sua <strong>Raspberry Pi</strong> e você já pode começar a programar!</p>
-
 
 
 
