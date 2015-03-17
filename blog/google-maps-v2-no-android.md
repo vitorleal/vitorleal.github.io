@@ -5,7 +5,7 @@ Vamos ver como inserir o [Google Maps V2](https://developers.google.com/maps/doc
 
 ## Adicionando as permissões no **AndroidManifest**
 
-Antes de mais nada vamos adicioanr as permissões nescessárias ([<uses-permission>](https://developer.android.com/guide/topics/manifest/uses-permission-element.html)) ao nosso arquivo **AndroidManifest.xml** dentro da tag [<manifest>](https://developer.android.com/guide/topics/manifest/manifest-element.html)
+Antes de mais nada vamos adicioanr as permissões nescessárias **[<uses-permission>](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) ao nosso arquivo **AndroidManifest.xml** dentro da tag [<manifest>](https://developer.android.com/guide/topics/manifest/manifest-element.html)
 
 ```
     <uses-permission android:name="android.permission.INTERNET"/>
