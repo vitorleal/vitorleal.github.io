@@ -18,6 +18,14 @@
     }]
   },
 
+  "javascript-no-mundo-da-internet-das-coisas-niteroijs": {
+    "base": "../",
+    "title": "JavaScript no mundo da internet das coisas no Niteroi.js",
+    "date": "2015-04-12 12:30",
+    "categories": ["nodejs", "iot", "talks", "desenvolvimento"],
+    "img": "/assets/img/blog/javascript-no-iot.png",
+    "speakerdeck": "1362002ca5e54219bd896822a2fd54ba"
+  },
   "google-maps-v2-no-android": {
     "base": "../",
     "title": "Google maps V2 no Android",
