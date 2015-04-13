@@ -107,7 +107,7 @@
   },
   "internet-of-things-com-nodejs-campus-party-recife": {
     "base": "../",
-    "title": "Internet of Things com NodeJS - Campus Party Recife 2014",
+    "title": "Internet of Things com Node.js - Campus Party Recife 2014",
     "date": "2014-07-25 15:15",
     "categories": ["nodejs", "IoT", "arduino", "talks", "campus-party"],
     "img": "/assets/img/blog/iot-campus-party.jpg",
