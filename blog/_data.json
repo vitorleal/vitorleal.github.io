@@ -26,6 +26,14 @@
     "img": "/assets/img/blog/javascript-no-iot.png",
     "speakerdeck": "1362002ca5e54219bd896822a2fd54ba"
   },
+  "desenvolvendo-wearables-com-arduino-e-javascript-arduino-day-2": {
+    "base": "../",
+    "title": "Desenvolvendo wearables com Node.js e Arduino",
+    "date": "2015-03-31 11:05",
+    "categories": ["nodejs", "iot", "talks", "desenvolvimento", "arduino"],
+    "img": "/assets/img/blog/arduino-day-2.png",
+    "speakerdeck": "ecce659fb4354145bd6b8f87f1a9e79b"
+  },
   "google-maps-v2-no-android": {
     "base": "../",
     "title": "Google maps V2 no Android",
