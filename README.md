@@ -1,5 +1,5 @@
-## My personal website
-This is my website/blog using [HarpJS](http://harpjs.com/) to generate the static content.
+## My personal website/blog
+This is my website/blog using [Harp.js](http://harpjs.com/) to generate the static content.
 
 
 ## License
