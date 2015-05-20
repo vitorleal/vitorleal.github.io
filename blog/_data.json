@@ -24,7 +24,8 @@
     "date": "2015-04-12 12:30",
     "categories": ["nodejs", "iot", "talks", "desenvolvimento"],
     "img": "/assets/img/blog/javascript-no-iot.png",
-    "speakerdeck": "1362002ca5e54219bd896822a2fd54ba"
+    "speakerdeck": "1362002ca5e54219bd896822a2fd54ba",
+    "description": "Como entrar no mundo da internet das coisas utilizando Node.js e hardware livre"
   },
   "desenvolvendo-wearables-com-arduino-e-javascript-arduino-day-2": {
     "base": "../",
@@ -32,7 +33,8 @@
     "date": "2015-03-31 11:05",
     "categories": ["nodejs", "iot", "talks", "desenvolvimento", "arduino"],
     "img": "/assets/img/blog/arduino-day-2.png",
-    "speakerdeck": "ecce659fb4354145bd6b8f87f1a9e79b"
+    "speakerdeck": "ecce659fb4354145bd6b8f87f1a9e79b",
+    "description": "Como foi desenvolvido o Kit IoT Wearable Bluetooth da Telefonica VIVO utilizando hardware livre"
   },
   "google-maps-v2-no-android": {
     "base": "../",
