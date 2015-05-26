@@ -49,6 +49,7 @@
     "title": "Google maps V2 no Android",
     "date": "2015-03-16 16:30",
     "categories": ["android", "google maps", "maps", "desenvolvimento"],
+    "description": "Como utilizar o Google Maps V2 em um aplicativo Android",
     "img": "/assets/img/blog/android-maps.png"
   },
   "bluetooth-debugging-no-android-wear": {
