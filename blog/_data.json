@@ -57,7 +57,8 @@
     "title": "Bluetooth Debugging no Android Wear",
     "date": "2015-03-10 00:20",
     "categories": ["android", "wear", "wearable", "bluetooth", "debug", "adb", "desenvolvimento"],
-    "img": "/assets/img/blog/android-wear.jpg"
+    "img": "/assets/img/blog/android-wear.jpg",
+    "description": "Como debuggar pelo bluetooth no Android Wear"
   },
   "autocomplete-input-html5-sem-jquery": {
     "base": "../",
