@@ -49,8 +49,8 @@
     "title": "Google maps V2 no Android",
     "date": "2015-03-16 16:30",
     "categories": ["android", "google maps", "maps", "desenvolvimento"],
-    "description": "Como utilizar o Google Maps V2 em um aplicativo Android",
-    "img": "/assets/img/blog/android-maps.png"
+    "img": "/assets/img/blog/android-maps.png",
+    "description": "Como utilizar o Google Maps V2 em um aplicativo Android"
   },
   "bluetooth-debugging-no-android-wear": {
     "base": "../",
@@ -74,11 +74,10 @@
     "pubdate": "2014-07-08 10:20",
     "date": "2015-02-26 21:20",
     "categories": ["raspberrypi", "hardware", "makers", "nodejs"],
-    "img": "/assets/img/blog/raspberry-nodejs.jpg"
+    "img": "/assets/img/blog/raspberry-nodejs.jpg",
+    "description": "Instalando Node.js latest na Raspberry Pi"
   },
   "instalando-golang-na-intel-edison": {
-    "base": "../",
-    "title": "Instalando Golang na Intel Edison",
     "description": "Vamos ver o passo a passo de como instalar Go na placa Intel Edson",
     "date": "2015-02-12 16:30",
     "categories": ["programacao", "go", "golang", "intel", "edison", "desenvolvimento"],
