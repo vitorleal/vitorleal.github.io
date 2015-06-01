@@ -87,11 +87,11 @@
   "desenvolvendo-wearables-com-js-campus-party-2015": {
     "base": "../",
     "title": "Desenvolvendo Wearables com JS - Campus Party 2015",
-    "description": "Palestra na Campus Party 2015 de como desenvolver aplicação para o Kit IoT Wearable da Telefonica VIVO",
     "date": "2015-02-04 11:45",
     "categories": ["programacao", "talks", "campus-party", "nodejs", "IoT", "desenvolvimento", "wearables"],
     "img": "/assets/img/blog/vitor-leal-campus-party-2015.png",
-    "speakerdeck": "1a9dfecd615b4661ac2f0499eab94d1d"
+    "speakerdeck": "1a9dfecd615b4661ac2f0499eab94d1d",
+    "description": "Palestra na Campus Party 2015 de como desenvolver aplicação para o Kit IoT Wearable da Telefonica VIVO"
   },
   "curso-de-programacao-iot-com-nodejs-na-fiap": {
     "base": "../",
