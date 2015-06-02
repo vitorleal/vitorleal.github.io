@@ -96,10 +96,10 @@
   "curso-de-programacao-iot-com-nodejs-na-fiap": {
     "base": "../",
     "title": "Curso de desenvolvimento de aplicações em Node.js para Internet das Coisas",
-    "description": "Curso na FIAP focado em desenvolvimento de aplicações para Internet das Coisas",
     "date": "2014-09-24 10:20",
     "categories": ["programacao", "curso", "fiap", "nodejs", "IoT", "desenvolvimento"],
-    "img": "/assets/img/blog/fiap-nodejs.jpg"
+    "img": "/assets/img/blog/fiap-nodejs.jpg",
+    "description": "Curso na FIAP focado em desenvolvimento de aplicações para Internet das Coisas"
   },
   "programacao-nao-e-um-bicho-de-7-megabits": {
     "base": "../",
