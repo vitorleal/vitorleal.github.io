@@ -104,11 +104,11 @@
   "programacao-nao-e-um-bicho-de-7-megabits": {
     "base": "../",
     "title": "Programação não é um bicho de 7 megabits",
-    "description": "Palestra sobre desenvolvimento para não desenvolvedores realizada no evento RIA",
     "date": "2014-08-27 14:30",
     "categories": ["talks", "programacao", "desenvolvimento"],
     "img": "/assets/img/blog/bicho-7-megabits.jpg",
-    "speakerdeck": "a31d8070104b01324de17ae407783e32"
+    "speakerdeck": "a31d8070104b01324de17ae407783e32",
+    "description": "Palestra sobre desenvolvimento para não desenvolvedores realizada no evento RIA"
   },
   "weio-hardware-para-a-web-of-things": {
     "base": "../",
