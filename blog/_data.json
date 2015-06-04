@@ -113,10 +113,10 @@
   "weio-hardware-para-a-web-of-things": {
     "base": "../",
     "title": "WeIO - O Hardware para a Web of Things",
-    "description": "Vamos entender um pouco mais sobre a nova placa WeIO",
     "date": "2014-08-25 23:10",
     "categories": ["IoT", "hardware"],
-    "img": "/assets/img/blog/weio.jpg"
+    "img": "/assets/img/blog/weio.jpg",
+    "description": "Vamos entender um pouco mais sobre a nova placa WeIO"
   },
   "internet-of-things-com-nodejs-google-developer-group-devfest-sul": {
     "base": "../",
