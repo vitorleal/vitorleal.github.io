@@ -121,11 +121,11 @@
   "internet-of-things-com-nodejs-google-developer-group-devfest-sul": {
     "base": "../",
     "title": "Internet of Things com Node.JS - Google Developer Groups - DevFest Sul",
-    "description": "Palestra no GDG Sul sobre desenvolvimento para Internet of Things com Node.js",
     "date": "2014-08-23 14:30",
     "categories": ["talks", "nodejs", "IoT", "gdg", "arduino", "raspberrypi"],
     "img": "/assets/img/blog/iot-nodejs-gdg-devfest-sul.jpg",
-    "speakerdeck": "47b571500d280132e45c16030f01e0df"
+    "speakerdeck": "47b571500d280132e45c16030f01e0df",
+    "description": "Palestra no GDG Sul sobre desenvolvimento para Internet of Things com Node.js"
   },
   "configurando-flask-com-uwsgi-e-nginx": {
     "base": "../",
