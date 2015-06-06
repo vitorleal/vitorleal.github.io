@@ -78,11 +78,10 @@
     "description": "Instalando Node.js latest na Raspberry Pi"
   },
   "instalando-golang-na-intel-edison": {
-    "description": "Vamos ver o passo a passo de como instalar Go na placa Intel Edson",
     "date": "2015-02-12 16:30",
     "categories": ["programacao", "go", "golang", "intel", "edison", "desenvolvimento"],
     "img": "/assets/img/blog/golang-intel-edson.png",
-    "description": "Instalando Golang (Go) na Intel Edison"
+    "description": "Vamos ver o passo a passo de como instalar Go na placa Intel Edson"
   },
   "desenvolvendo-wearables-com-js-campus-party-2015": {
     "base": "../",
