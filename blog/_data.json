@@ -132,7 +132,8 @@
     "title": "Configurando Flask com UWSGI e Nginx",
     "date": "2014-08-05 016:00",
     "categories": ["uwsgi", "nginx", "flask", "python", "server"],
-    "img": "/assets/img/blog/flask-uwsgi-nginx.jpg"
+    "img": "/assets/img/blog/flask-uwsgi-nginx.jpg",
+    "description": "Configurando flask com UWSGI e NGINX"
   },
   "internet-of-things-com-nodejs-campus-party-recife": {
     "base": "../",
