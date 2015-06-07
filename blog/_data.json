@@ -142,7 +142,8 @@
     "date": "2014-07-25 15:15",
     "categories": ["nodejs", "IoT", "arduino", "talks", "campus-party"],
     "img": "/assets/img/blog/iot-campus-party.jpg",
-    "speakerdeck": "1c4ffd70f66301318ea7322b93b4e98e"
+    "speakerdeck": "1c4ffd70f66301318ea7322b93b4e98e",
+    "description": "Desenvolvendo para Internet das Coisas com Node.js - Campus Party 2014"
   },
   "internet-of-things-com-nodejs-iot-day": {
     "base": "../",
