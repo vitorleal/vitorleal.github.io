@@ -150,7 +150,8 @@
     "title": "Internet of Things com Node.js - 1º IoT Day",
     "date": "2014-05-31 11:00",
     "categories": ["nodejs", "IoT", "arduino", "talks"],
-    "speakerdeck": "41677fd0cb1c0131162202b4824706e4"
+    "speakerdeck": "41677fd0cb1c0131162202b4824706e4",
+    "description": "Internet of Things com Node.js - 1º IoT Day"
   },
   "introducao-ao-javascript": {
     "base": "../",
