@@ -158,7 +158,8 @@
     "title": "Introdução ao JavaScript",
     "date": "2014-05-25 22:50",
     "categories": ["javascript", "talks"],
-    "speakerdeck": "80d42640c6a3013196d9061a363cc5d8"
+    "speakerdeck": "80d42640c6a3013196d9061a363cc5d8",
+    "description": "Introdução ao JavaScript"
   },
   "introducao-ao-node-dot-js": {
     "base": "../",
