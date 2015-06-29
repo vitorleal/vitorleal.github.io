@@ -46,6 +46,12 @@ Pronto agora ao reiniciar a **Intel Edison** seu serviço vai iniciar automatica
 
 ## Comandos systemctl
 
+Para permitir que o serviço inicie no reboot da maquina
+
+```
+$ systemctl enable {nome-do-seu-servico}
+```
+
 Se você pricsar parar o serviço por algum motivo utilize o comando:
 
 ```
