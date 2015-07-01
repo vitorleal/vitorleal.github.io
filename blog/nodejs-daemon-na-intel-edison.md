@@ -16,6 +16,7 @@ Primeiro vamos criar um arquivo **.service** dentro da pasta **/lib/systemd/syst
 ```
 $ touch /lib/systemd/system/{nome-do-seu-servico}.service
 ```
+
 Lembre-se de trocar a variavel ```{nome-do-seu-servico}``` antes de criar o arquivo.
 
 
@@ -46,22 +47,22 @@ Pronto agora ao reiniciar a **Intel Edison** seu serviço vai iniciar automatica
 
 ## Comandos systemctl
 
-Para permitir que o serviço inicie no reboot da maquina
+Para permitir que o serviço inicie no reboot da maquina:
 
 ```
 $ systemctl enable {nome-do-seu-servico}
-```
-
-Se você pricsar parar o serviço por algum motivo utilize o comando:
-
-```
-$ systemctl stop {nome-do-seu-servico}
 ```
 
 Para iniciar o serviço utilize o comando:
 
 ```
 $ systemctl start {nome-do-seu-servico}
+```
+
+Para parar o serviço utilize o comando:
+
+```
+$ systemctl stop {nome-do-seu-servico}
 ```
 
 Para reiniciar o serviço utilize o comando:
