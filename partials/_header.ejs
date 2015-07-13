@@ -1,0 +1,31 @@
+<div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+  <div class="mdl-layout__header-row">
+    <span class="android-title mdl-layout-title mdl-typography--text-uppercase android-link">Vitor Leal</span>
+
+    <div class="android-header-spacer mdl-layout-spacer"></div>
+
+    <div class="android-navigation-container">
+      <nav class="android-navigation mdl-navigation">
+        <% menu.forEach(function (item) { %>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase
+          <% if (item.active) { %>active<% } %>"
+          <% if (item.external) { %>
+            href="<%= item.link %>" target="_blank"
+          <% } else { %>
+            href="<%= base %><%= item.link %>"
+          <% } %>
+          >
+          <%= item.title %></a>
+        <% }); %>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="android-drawer mdl-layout__drawer">
+  <nav class="mdl-navigation">
+    <% menu.forEach(function (item) { %>
+    <a class="mdl-navigation__link <% if (item.active) { %>active<% } %>" href="<%= base %><%= item.link %>"><%= item.title %></a>
+    <% }); %>
+  </nav>
+</div>

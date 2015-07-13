@@ -16,6 +16,10 @@
     "year": "2015",
 
     "menu": [{
+      "title": "Home",
+      "link": "",
+      "active": true
+    }, {
       "title": "Blog",
       "link": "blog",
       "active": false
@@ -27,6 +31,14 @@
       "title": "Talks",
       "link": "talks",
       "active": false
+    }, {
+      "title": "GitHub",
+      "link": "https://github.com/vitorleal",
+      "external": true
+    }, {
+      "title": "LinkedIn",
+      "link": "http://www.linkedin.com/in/vitorleal",
+      "external": true
     }]
   }
 }

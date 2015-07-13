@@ -1,3 +1,30 @@
-<footer id="footer">
-  <p class="credit">Copyright &copy; <%= year %> - <%= name %></p>
+<footer class="android-footer mdl-mega-footer">
+  <div class="mdl-mega-footer--top-section">
+    <div class="mdl-mega-footer--left-section">
+    </div>
+
+    <div class="mdl-mega-footer--right-section">
+      <a class="mdl-typography--font-light" href="#top">
+        Ir para o topo <i class="material-icons">expand_less</i>
+      </a>
+    </div>
+  </div>
+
+  <div class="mdl-mega-footer--middle-section">
+    <p class="mdl-typography--font-light">Copyright &copy; <%= year %> - <%= name %></p>
+  </div>
+
+  <div class="mdl-mega-footer--bottom-section">
+    <% menu.forEach(function (item) { %>
+    <a class="android-link mdl-typography--font-light
+      <% if (item.active) { %>active<% } %>"
+      <% if (item.external) { %>
+        href="<%= item.link %>" target="_blank"
+      <% } else { %>
+        href="<%= base %><%= item.link %>"
+      <% } %>
+      >
+      <%= item.title %></a>
+    <% }); %>
+  </div>
 </footer>

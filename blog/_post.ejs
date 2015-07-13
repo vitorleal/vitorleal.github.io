@@ -1,19 +1,24 @@
-<% var post = public.blog._data[source] %>
+<a name="top"></a>
 
-<header>
-  <h1 class="entry-title"><%= title %></h1>
-  <p class="meta">
-  <time datetime="<%= post.date %>" pubdate="<%= post.pubdate %>">
-      <% var date = new Date(post.date); %>
-      <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
-    </time>
-  </p>
-</header>
+<section class="android-blog-section android-post-section">
+  <% var post = public.blog._data[source] %>
 
-<%- yield %>
+  <header>
+    <h1><%= title %></h1>
 
-<% if (post.speakerdeck) { %>
-<%- partial("../partials/_speakerdeck", { id: post.speakerdeck }) %>
-<% } %>
+    <p class="meta">
+      <time datetime="<%= post.date %>" pubdate="<%= post.pubdate %>">
+        <% var date = new Date(post.date); %>
+        <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
+      </time>
+    </p>
+  </header>
 
-<%- partial("../partials/_disqus") %>
+  <%- yield %>
+
+  <% if (post.speakerdeck) { %>
+  <%- partial("../partials/_speakerdeck", { id: post.speakerdeck }) %>
+  <% } %>
+
+  <%- partial("../partials/_disqus") %>
+</section>

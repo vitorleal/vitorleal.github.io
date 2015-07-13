@@ -4,6 +4,10 @@
     "title": "Blog | Vitor Leal",
     "description": "Lista de posts sobre programação, hardware, palestras, eventos, internet of things e outros interesses",
     "menu": [{
+      "title": "Home",
+      "link": "",
+      "active": false
+    }, {
       "title": "Blog",
       "link": "blog",
       "active": true
@@ -15,6 +19,14 @@
       "title": "Talks",
       "link": "talks",
       "active": false
+    }, {
+      "title": "GitHub",
+      "link": "https://github.com/vitorleal",
+      "external": true
+    }, {
+      "title": "LinkedIn",
+      "link": "http://www.linkedin.com/in/vitorleal",
+      "external": true
     }]
   },
 
