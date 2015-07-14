@@ -6,7 +6,7 @@ var request  = require('request'),
 
 var getRepos = function getRepos () {
   var req = request.get({
-    url: 'https://api.github.com/users/vitorleal/repos?page=1&per_page=25',
+    url: 'https://api.github.com/users/vitorleal/repos?page=1&per_page=25&sort=updated',
     headers: {
       'User-Agent': 'vitorleal'
     }
