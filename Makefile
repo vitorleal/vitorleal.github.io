@@ -40,5 +40,4 @@ else
 endif
 
 repos:
-	curl "https://api.github.com/users/vitorleal/repos?page=1&per_page=100" | \
-		 @awk '{ print  }' > "./projetos/_repos.json"
+	node _repos.js

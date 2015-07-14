@@ -4,7 +4,35 @@
   <h2 class="mdl-typography--display-1-color-contrast">Meus projetos open source - GitHub</h2>
   <p>Veja mais em <a href="http://github.com/<%= github %>">http://github.com/<%= github %></a></p>
 
-  <ul>
-    <li class="loading">Atualizando...</li>
-  </ul>
+  <div class="android-card-container mdl-grid">
+    <% public.projetos._data.repos.forEach(function (repo) { %>
+    <article class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--3dp">
+      <div class="mdl-card__title">
+        <a href="<%= repo.html_url %>">
+          <h4 class="mdl-card__title-text"><%= repo.name %></h4>
+        </a>
+      </div>
+
+      <div class="mdl-card__time">
+        <time datetime="<%= repo.updated_at %>" <% if (repo.created_at) { %>pubdate="<%= repo.created_at %>"<% } %>>
+          <% var date = new Date(repo.updated_at); %>
+          <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
+        </time>
+      </div>
+
+      <div class="mdl-card__supporting-text">
+        <p class="mdl-typography--font-light mdl-typography--subhead">
+          <%= repo.description %>
+        </p>
+      </div>
+
+      <div class="mdl-card__actions">
+        <a class="android-link dark mdl-button mdl-js-button mdl-typography--text-uppercase"
+          href="<%= repo.html_url %>">
+          Veja o repositório <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </article>
+    <% }); %>
+  </div>
 </section>
