@@ -1,9 +1,10 @@
-.PHONY: deploy clean new
+.PHONY: deploy clean new repos
 
 print = @echo "=> $(1)"\
 				"\n-----------------------"
 
-createPost = @cp "./blog/_template.md" "./blog/$(strip $(1)).md"
+dasherize  = $(shell echo $(strip $(1)) | tr ' [A-Z]-' '-[a-z]-')
+createPost = $(shell sed 's/{TITLE}/$(strip $(2))/g' "blog/_template.md" > "blog/$(strip $(1)).md")
 
 deploy:
 	make clean
@@ -19,7 +20,7 @@ deploy:
 	cp -r www/ ./
 	make clean
 
-	$(call print, "Commit changes to Master pages")
+	$(call print, "Commit changes to master")
 	git add .
 	git commit -m ":rocket: deploy website"
 	git push origin master
@@ -32,8 +33,12 @@ clean:
 
 new:
 ifeq ($(post),)
-	@echo Qual nome do novo post? Ex: make new post=meu-novo-post
+	@echo Qual nome do novo post? Ex: make new post="Meu novo post"
 else
 	$(call print, "Novo post: $(post)")
-	$(call createPost, $(post))
+	$(call createPost, $(call dasherize, $(post)), $(post))
 endif
+
+repos:
+	curl "https://api.github.com/users/vitorleal/repos?page=1&per_page=100" | \
+		 @awk '{ print  }' > "./projetos/_repos.json"
