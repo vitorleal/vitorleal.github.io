@@ -11,7 +11,9 @@
   </div>
 
   <div class="mdl-mega-footer--middle-section">
-    <p class="mdl-typography--font-light">Copyright &copy; <%= year %> - <%= name %></p>
+    <p class="mdl-typography--font-light">
+      Copyright &copy; <%= year %> - <%= name %> - <a href="mailto:<%= email %>"><%= email %></a>
+    </p>
   </div>
 
   <div class="mdl-mega-footer--bottom-section">
@@ -26,5 +28,7 @@
       >
       <%= item.title %></a>
     <% }); %>
+    <a href="http://twitter.com/<%= twitter %>"
+      class="android-link mdl-typography--font-light">Twitter</a>
   </div>
 </footer>
