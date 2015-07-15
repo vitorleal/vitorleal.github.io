@@ -48,7 +48,6 @@
     <% var data = public.blog._data; var posts = Object.keys(data); posts.shift(); posts.length = 4; %>
     <% posts.forEach(function (post) { %>
     <article class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-
       <% if (data[post].img) { %>
       <header class="mdl-card__media">
         <img src="<%= data[post].img %>">
@@ -56,7 +55,9 @@
       <% } %>
 
       <div class="mdl-card__title">
-        <h4 class="mdl-card__title-text"><%= data[post].title %></h4>
+        <a href="<%= base %>blog/<%= post %>">
+          <h4 class="mdl-card__title-text"><%= data[post].title %></h4>
+        </a>
       </div>
 
       <div class="mdl-card__supporting-text">
@@ -64,7 +65,8 @@
       </div>
 
       <div class="mdl-card__actions">
-        <a class="android-link dark mdl-button mdl-js-button mdl-typography--text-uppercase" href="<%= base %>blog/<%= post %>">
+        <a class="android-link dark mdl-button mdl-js-button mdl-typography--text-uppercase"
+          href="<%= base %>blog/<%= post %>">
           Leia o post <i class="material-icons">chevron_right</i>
         </a>
       </div>
