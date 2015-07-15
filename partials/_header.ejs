@@ -25,7 +25,15 @@
 <div class="android-drawer mdl-layout__drawer">
   <nav class="mdl-navigation">
     <% menu.forEach(function (item) { %>
-    <a class="mdl-navigation__link <% if (item.active) { %>active<% } %>" href="<%= base %><%= item.link %>"><%= item.title %></a>
+    <a class="mdl-navigation__link
+      <% if (item.active) { %>active<% } %>"
+      <% if (item.external) { %>
+        href="<%= item.link %>" target="_blank"
+      <% } else { %>
+        href="<%= base %><%= item.link %>"
+      <% } %>
+      >
+      <%= item.title %></a>
     <% }); %>
   </nav>
 </div>
