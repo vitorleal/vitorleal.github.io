@@ -17,27 +17,34 @@
 
     "menu": [{
       "title": "Home",
-      "link": "",
-      "active": true
+      "link": ""
     }, {
       "title": "Blog",
-      "link": "blog",
-      "active": false
+      "link": "blog"
     }, {
       "title": "Projetos",
-      "link": "projetos",
-      "active": false
+      "link": "projetos"
+    }, {
+      "title": "Portfolio",
+      "link": "portfolio"
     }, {
       "title": "Talks",
-      "link": "talks",
-      "active": false
-    }, {
+      "link": "talks"
+    }],
+
+    "menuActive": "Home",
+
+    "social": [{
       "title": "GitHub",
       "link": "https://github.com/vitorleal",
       "external": true
     }, {
       "title": "LinkedIn",
       "link": "http://www.linkedin.com/in/vitorleal",
+      "external": true
+    }, {
+      "title": "Twitter",
+      "link": "https://twitter.com/@vitorleal",
       "external": true
     }]
   }

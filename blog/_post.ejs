@@ -17,8 +17,8 @@
   <%- yield %>
 
   <% if (post.speakerdeck) { %>
-  <%- partial("../partials/_speakerdeck", { id: post.speakerdeck }) %>
+  <%- partial("../_partials/_speakerdeck", { id: post.speakerdeck }) %>
   <% } %>
 
-  <%- partial("../partials/_disqus") %>
+  <%- partial("../_partials/_disqus") %>
 </section>

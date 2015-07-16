@@ -1,0 +1,21 @@
+{
+  "index": {
+    "base": "../",
+    "title": "Portfolio | Vitor Leal",
+    "description": "Últimos projetos para clientes",
+
+    "menuActive": "Portfolio"
+  },
+
+  "emporiojasmim": {
+    "title": "Empório Jasmim",
+    "description": "A Empório Jasmim nasceu da vontade de fornecer refeições saudáveis, gostosas e nutritivas, criando um novo conceito de salada, a partir de combinações variadas e equilibradas de verduras, legumes, frutas, grãos e proteínas",
+    "link": "http://www.emporiojasmim.com"
+  },
+
+  "roverpix": {
+    "title": "Roverpix",
+    "description": "O sistema Roverpix permite que você fotografe sem compromisso, divulgue seu nome/marca e ainda ganhe vendendo suas fotos on line",
+    "link": "http://roverpix.com"
+  }
+}

@@ -5,7 +5,12 @@
   <p>Todas as palestras podem ser encontradas no <a href="https://speakerdeck.com/vitorleal">SpeakerDeck</a>.</p>
 
   <div class="android-card-container mdl-grid">
-    <% var data = public.blog._data; var posts = Object.keys(data); posts.shift(); %>
+    <%
+      var data = public.blog._data;
+      var posts = Object.keys(data);
+      posts.shift();
+    %>
+
     <% posts.forEach(function (post) { %>
     <% if (data[post].categories.indexOf("talks") !== -1) { %>
     <article class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--3dp">

@@ -3,30 +3,7 @@
     "base": "../",
     "title": "Talks | Vitor Leal",
     "description": "Uma lista das palestras que ministrei",
-    "menu": [{
-      "title": "Home",
-      "link": "",
-      "active": false
-    }, {
-      "title": "Blog",
-      "link": "blog",
-      "active": false
-    }, {
-      "title": "Projetos",
-      "link": "projetos",
-      "active": false
-    }, {
-      "title": "Talks",
-      "link": "talks",
-      "active": true
-    }, {
-      "title": "GitHub",
-      "link": "https://github.com/vitorleal",
-      "external": true
-    }, {
-      "title": "LinkedIn",
-      "link": "http://www.linkedin.com/in/vitorleal",
-      "external": true
-    }]
+
+    "menuActive": "Talks"
   }
 }

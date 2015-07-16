@@ -18,17 +18,15 @@
 
   <div class="mdl-mega-footer--bottom-section">
     <% menu.forEach(function (item) { %>
-    <a class="android-link mdl-typography--font-light
-      <% if (item.active) { %>active<% } %>"
-      <% if (item.external) { %>
-        href="<%= item.link %>" target="_blank"
-      <% } else { %>
-        href="<%= base %><%= item.link %>"
-      <% } %>
-      >
-      <%= item.title %></a>
+    <a class="android-link mdl-typography--font-light"
+      href="<%= base %><%= item.link %>">
+      <%= item.title %>
+    </a>
     <% }); %>
-    <a href="http://twitter.com/<%= twitter %>"
-      class="android-link mdl-typography--font-light">Twitter</a>
+    <% social.forEach(function (item) { %>
+    <a class="android-link mdl-typography--font-light" href="<%= item.link %>" target="_blank">
+      <%= item.title %>
+    </a>
+    <% }); %>
   </div>
 </footer>

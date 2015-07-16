@@ -3,38 +3,8 @@
     "base": "../",
     "title": "Projetos | Vitor Leal",
     "description": "Lista de projetos open source no GitHub - @vitorleal",
-    "menu": [
-      {
-        "title": "Home",
-        "link": "",
-        "active": false
-      },
-      {
-        "title": "Blog",
-        "link": "blog",
-        "active": false
-      },
-      {
-        "title": "Projetos",
-        "link": "projetos",
-        "active": true
-      },
-      {
-        "title": "Talks",
-        "link": "talks",
-        "active": false
-      },
-      {
-        "title": "GitHub",
-        "link": "https://github.com/vitorleal",
-        "external": true
-      },
-      {
-        "title": "LinkedIn",
-        "link": "http://www.linkedin.com/in/vitorleal",
-        "external": true
-      }
-    ]
+
+    "menuActive": "Projetos"
   },
   "repos": [
     {

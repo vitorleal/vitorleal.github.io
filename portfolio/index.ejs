@@ -1,0 +1,46 @@
+<a name="top"></a>
+
+<section class="android-blog-section">
+  <h2 class="mdl-typography--display-1-color-contrast">Portfolio</h2>
+
+  <div class="android-card-container mdl-grid">
+    <%
+       var data = public.portfolio._data;
+       var portfolio = Object.keys(data);
+       portfolio.shift();
+    %>
+
+    <% portfolio.forEach(function (item) { %>
+    <article class="mdl-cell
+      mdl-cell--12-col
+      mdl-cell--12-col-tablet
+      mdl-cell--12-col-phone
+      mdl-card mdl-shadow--3dp">
+      <% if (data[item].img) { %>
+      <header class="mdl-card__media">
+        <img src="<%= data[item].img %>">
+      </header>
+      <% } %>
+
+      <div class="mdl-card__title">
+        <a href="data[item].link">
+          <h4 class="mdl-card__title-text"><%= data[item].title %></h4>
+        </a>
+      </div>
+
+      <div class="mdl-card__supporting-text">
+        <p class="mdl-typography--font-light mdl-typography--subhead">
+          <%= data[item].description %>
+        </p>
+      </div>
+
+      <div class="mdl-card__actions">
+        <a class="android-link dark mdl-button mdl-js-button mdl-typography--text-uppercase"
+          href="<%= data[item].link %>">
+          Veja o trabalho <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </article>
+    <% }); %>
+  </div>
+</section>
