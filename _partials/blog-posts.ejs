@@ -1,0 +1,58 @@
+<%
+  var data = public.blog._data;
+  var posts = Object.keys(data);
+  var col = (show >= 0) ? (12 / show) : 4;
+
+  posts.shift();
+  posts.length = (show >= 0) ? show : posts.length;
+%>
+
+<div class="android-card-container mdl-grid">
+  <% posts.forEach(function (post) { %>
+    <article class="mdl-cell
+      mdl-cell--<%= col %>-col
+      mdl-cell--12-col-tablet
+      mdl-cell--12-col-phone
+      mdl-card mdl-shadow--3dp">
+
+      <% if (data[post].img) { %>
+        <header class="mdl-card__media">
+          <img src="<%= data[post].img %>">
+        </header>
+      <% } %>
+
+      <div class="mdl-card__title">
+        <a href="<%= base %>blog/<%= post %>">
+          <h4 class="mdl-card__title-text"><%= data[post].title %></h4>
+        </a>
+      </div>
+
+      <div class="mdl-card__time">
+        <time datetime="<%= data[post].date %>" <% if (data[post].pubdate) { %>pubdate="<%= data[post].pubdate %>"<% } %>>
+          <% var date = new Date(data[post].date); %>
+          <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
+        </time>
+      </div>
+
+      <div class="mdl-card__supporting-text">
+        <% if (data[post].description) { %>
+          <p class="mdl-typography--font-light mdl-typography--subhead"><%= data[post].description %></p>
+        <% } %>
+
+        <% if (data[post].categories) { %>
+          <footer>
+            <span class="categories"><%= data[post].categories.join(", ") %></span>
+          </footer>
+        <% } %>
+      </div>
+
+      <div class="mdl-card__actions">
+        <a class="android-link dark mdl-button mdl-js-button mdl-typography--text-uppercase"
+          href="<%= base %>blog/<%= post %>">
+          Leia o post <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </article>
+  <% }); %>
+</div>
+
