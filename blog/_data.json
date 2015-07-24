@@ -7,6 +7,14 @@
     "menuActive": "Blog"
   },
 
+  "entrevista-na-campus-party-recife-2015-sobre-internet-das-coisas": {
+    "base": "../",
+    "title": "Entrevista na Campus Party Recife 2015 sobre Internet das Coisas e Wearables",
+    "date": "2015-07-24 10:56",
+    "categories": ["nodejs", "iot", "desenvolvimento", "wearable"],
+    "img": "/assets/img/blog/entrevista-campus-party-recife-2015.png",
+    "description": "Vitor Leal, do Centro de Inovação Telefônica Vivo, conta um pouco sobre smart cities, wearables e a Hackathon. "
+  },
   "nodejs-daemon-na-intel-edison": {
     "base": "../",
     "title": "Node.js daemon na Intel Edison utilizando Systemctl",
