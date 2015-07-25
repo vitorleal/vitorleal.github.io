@@ -1,12 +1,16 @@
 <a name="top"></a>
 
+<% var post = public.blog._data[source] %>
+
+<% if (post.img) { %>
+<section style="background-image: url(<%= post.img %>)" class="blog-post-section"></section>
+<% } %>
+
+<h2 class="android-font blog-post-title mdl-typography--text-center"><%= title %></h2>
+
 <section class="android-blog-section android-post-section">
-  <% var post = public.blog._data[source] %>
-
   <header>
-    <h1><%= title %></h1>
-
-    <p class="meta">
+    <p class="meta date">
       <time datetime="<%= post.date %>" pubdate="<%= post.pubdate %>">
         <% var date = new Date(post.date); %>
         <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>

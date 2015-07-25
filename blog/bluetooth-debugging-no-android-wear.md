@@ -1,5 +1,4 @@
 ## Bluetooth debugging no Android Wear
-![Bluetooth debugging no Android Wear](../assets/img/blog/android-wear.jpg "Bluetooth debugging no Android Wear")
 
 Vamos ver os passos para poder conectar um [Moto360](https://moto360.motorola.com/) no seu computador para podre desenolver aplicações.
 

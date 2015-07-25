@@ -1,5 +1,4 @@
 ## Node.js daemon na Intel Edison utilizando Systemctl
-![Node.js dameon na Intel Edison utilizando Systemctl](../assets/img/blog/nodejs-daemon.jpg "Node.js daemon na Intel Edison utilizando Systemctl")
 
 Vamos ver como manter um serviço [Node.js](http://nodejs.org/) rodando sempre que a [Intel Edsion](https://en.wikipedia.org/wiki/Intel_Edison) ligar.
 

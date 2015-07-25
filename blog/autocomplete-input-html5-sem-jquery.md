@@ -1,5 +1,4 @@
 ## Como criar um autocomplete nativo do HTML5 sem usar jQuery
-![Auto complete nativo do HTML5 sem usar jQuery](../assets/img/blog/autocomplete-sem-jquery.jpg "Auto complete nativo do HTML5 sem usar jQuery")
 
 Neste pequeno post vamos ver como criar um **input** com autocomplete sem utilizar jQuey ou JavaScript.
 

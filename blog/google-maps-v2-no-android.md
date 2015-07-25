@@ -1,5 +1,4 @@
 ## Adicionando Google Maps V2 em um projeto Android
-![Adicionando Google Maps V2 em um projetp Andoird](../assets/img/blog/android-maps.png "Adicionando Google Maps V2 em um projetp Andoird")
 
 Vamos ver como inserir o [Google Maps V2](https://developers.google.com/maps/documentation/android/) em um projeto Android.
 
