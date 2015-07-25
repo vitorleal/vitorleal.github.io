@@ -134,13 +134,17 @@
         
           <a name="top"></a>
 
+
+
+
+<section style="background-image: url(/assets/img/blog/flask-uwsgi-nginx.jpg)" class="blog-post-section"></section>
+
+
+<h2 class="android-font blog-post-title mdl-typography--text-center">Configurando Flask com UWSGI e Nginx</h2>
+
 <section class="android-blog-section android-post-section">
-  
-
   <header>
-    <h1>Configurando Flask com UWSGI e Nginx</h1>
-
-    <p class="meta">
+    <p class="meta date">
       <time datetime="2014-08-05 016:00" pubdate="undefined">
         
         5/8/2014
@@ -148,17 +152,14 @@
     </p>
   </header>
 
-  <p><img src="http://vitorleal.com/assets/img/blog/flask-uwsgi-nginx.jpg" alt="Configurando Flask no servidor" title="Configurando Flask com UWSGI e Nginx"></p>
-<p>Neste post vou mostrar como configurar os serviços <a href="https://github.com/unbit/uwsgi-docs">UWSGI</a> e <a href="http://nginx.com">Nginx</a> em um servidor Ubuntu
+  <p>Neste post vou mostrar como configurar os serviços <a href="https://github.com/unbit/uwsgi-docs">UWSGI</a> e <a href="http://nginx.com">Nginx</a> em um servidor Ubuntu
  para rodar aplicações web utilizando o microframework de Python chamdo <a href="http://flask.pocoo.org">Flask</a>.</p>
 <h2>O que é <a href="http://flask.pocoo.org">Flask</a></h2><p>O Flask é um microframework para desenvolvimento web criado em Python. Super leve e compacto mas bem robusto e desenvolvido com ferramentas
  bem estáveis como a linguagem de templates para Python <a href="http://jinja.pocoo.org/docs">Jinja 2</a> e da biblioteca de <a href="http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">WSGI</a>
  para Ptyhon chamada <a href="http://werkzeug.pocoo.org">Werkzeug</a>.</p>
-<hr>
 <h2>Instalando o Nginx e o UWSGI no servidor</h2><p>Para instalar o Ngin e o UWSGI vamos utilizar o <strong>apt-get</strong>.</p>
 <pre><code>$ apt-get install uwsgi uwsgi-plugin-python nginx
-</code></pre><hr>
-<h2>Configurando o UWSGI</h2><p>Primeiro vamos crair o arquivo de configuração do <strong>uwsgi</strong> do nosso nosso webapp.</p>
+</code></pre><h2>Configurando o UWSGI</h2><p>Primeiro vamos crair o arquivo de configuração do <strong>uwsgi</strong> do nosso nosso webapp.</p>
 <pre><code>$ touch /etc/uwsgi/apps-available/nosso-app.ini
 </code></pre><p>Criamos um link simbólico do nosso arquvio de configuração na pasta <em>/etc/uwsgi/apps-enabled/*</em>.</p>
 <pre><code>$ ln -s /etc/uwsgi/apps-available/nosso-app.ini /etc/uwsgi/apps-enabled/nosso-app.ini

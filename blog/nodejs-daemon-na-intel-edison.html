@@ -134,13 +134,17 @@
         
           <a name="top"></a>
 
+
+
+
+<section style="background-image: url(/assets/img/blog/nodejs-daemon.jpg)" class="blog-post-section"></section>
+
+
+<h2 class="android-font blog-post-title mdl-typography--text-center">Node.js daemon na Intel Edison utilizando Systemctl</h2>
+
 <section class="android-blog-section android-post-section">
-  
-
   <header>
-    <h1>Node.js daemon na Intel Edison utilizando Systemctl</h1>
-
-    <p class="meta">
+    <p class="meta date">
       <time datetime="2015-05-20 11:30" pubdate="undefined">
         
         20/5/2015
@@ -148,8 +152,7 @@
     </p>
   </header>
 
-  <h2>Node.js daemon na Intel Edison utilizando Systemctl</h2><p><img src="../assets/img/blog/nodejs-daemon.jpg" alt="Node.js dameon na Intel Edison utilizando Systemctl" title="Node.js daemon na Intel Edison utilizando Systemctl"></p>
-<p>Vamos ver como manter um serviço <a href="http://nodejs.org/">Node.js</a> rodando sempre que a <a href="https://en.wikipedia.org/wiki/Intel_Edison">Intel Edsion</a> ligar.</p>
+  <h2>Node.js daemon na Intel Edison utilizando Systemctl</h2><p>Vamos ver como manter um serviço <a href="http://nodejs.org/">Node.js</a> rodando sempre que a <a href="https://en.wikipedia.org/wiki/Intel_Edison">Intel Edsion</a> ligar.</p>
 <h2>O que é o Systemctl</h2><p>Neste tutorial nós vamos usar o <a href="https://wiki.archlinux.org/index.php/Systemd">systemctl</a> que é um <em>manager</em> de sistemas e serviços do Linux.</p>
 <h2>O que temos que fazer</h2><p>Primeiro vamos criar um arquivo <strong>.service</strong> dentro da pasta <strong>/lib/systemd/system/</strong>.</p>
 <pre><code>$ touch /lib/systemd/system/{nome-do-seu-servico}.service
