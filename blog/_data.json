@@ -2,9 +2,7 @@
   "index": {
     "base": "../",
     "title": "Blog | Vitor Leal",
-    "description": "Lista de posts sobre programação, hardware, palestras, eventos, internet of things e outros interesses",
-
-    "menuActive": "Blog"
+    "description": "Lista de posts sobre programação, hardware, palestras, eventos, internet of things e outros interesses"
   },
 
   "entrevista-na-campus-party-recife-2015-sobre-internet-das-coisas": {

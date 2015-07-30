@@ -1,4 +1,7 @@
 {
+  "index": {
+    "menuActive": "Home"
+  },
   "robots": {
     "layout": false
   },
