@@ -158,15 +158,19 @@
  bem estáveis como a linguagem de templates para Python <a href="http://jinja.pocoo.org/docs">Jinja 2</a> e da biblioteca de <a href="http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">WSGI</a>
  para Ptyhon chamada <a href="http://werkzeug.pocoo.org">Werkzeug</a>.</p>
 <h2>Instalando o Nginx e o UWSGI no servidor</h2><p>Para instalar o Ngin e o UWSGI vamos utilizar o <strong>apt-get</strong>.</p>
-<pre><code>$ apt-get install uwsgi uwsgi-plugin-python nginx
-</code></pre><h2>Configurando o UWSGI</h2><p>Primeiro vamos crair o arquivo de configuração do <strong>uwsgi</strong> do nosso nosso webapp.</p>
-<pre><code>$ touch /etc/uwsgi/apps-available/nosso-app.ini
-</code></pre><p>Criamos um link simbólico do nosso arquvio de configuração na pasta <em>/etc/uwsgi/apps-enabled/*</em>.</p>
-<pre><code>$ ln -s /etc/uwsgi/apps-available/nosso-app.ini /etc/uwsgi/apps-enabled/nosso-app.ini
-</code></pre><p>Criamos o arquivo <strong>.sock</strong></p>
-<pre><code>$ touch /tmp/nosso-app.sock
-</code></pre><p>Agora vamos inserir os dados de configuração do nosso app.</p>
-<pre><code>[uwsgi]
+<pre><code class="language-bash">$ apt-get install uwsgi uwsgi-plugin-python nginx
+</code></pre>
+<h2>Configurando o UWSGI</h2><p>Primeiro vamos crair o arquivo de configuração do <strong>uwsgi</strong> do nosso nosso webapp.</p>
+<pre><code class="language-bash">$ touch /etc/uwsgi/apps-available/nosso-app.ini
+</code></pre>
+<p>Criamos um link simbólico do nosso arquvio de configuração na pasta <strong>etc/uwsgi/apps-enabled/</strong>.</p>
+<pre><code class="language-bash">$ ln -s /etc/uwsgi/apps-available/nosso-app.ini /etc/uwsgi/apps-enabled/nosso-app.ini
+</code></pre>
+<p>Criamos o arquivo <strong>.sock</strong></p>
+<pre><code class="language-bash">$ touch /tmp/nosso-app.sock
+</code></pre>
+<p>Agora vamos inserir os dados de configuração do nosso app.</p>
+<pre><code class="language-bash">[uwsgi]
 vhost      = true
 master     = true
 socket     = /tmp/nosso-app.sock    #local do socket do nosso app
@@ -180,15 +184,18 @@ threads    = 2
 http       = 0.0.0.0:5000           #ip e porta que vai rodar o app
 plugins    = python                 #plugin python do uwsgi que instalamos
 env        = ENV_VARIABLE=variable  #variaveis de ambiente
-</code></pre><p>Já podemos reiniciar o nosso serviço <strong>uwsgi</strong></p>
-<pre><code>$ sudo service uwsgi restart
-</code></pre><hr>
+</code></pre>
+<p>Já podemos reiniciar o nosso serviço <strong>uwsgi</strong></p>
+<pre><code class="language-bash">$ sudo service uwsgi restart
+</code></pre>
 <h2>Configurando o Nginx</h2><p>Primeiro vamos crair o arquivo de configuração <strong>nginx</strong> do nosso webapp.</p>
-<pre><code>$ touch /etc/nginx/sites-available/nosso-app
-</code></pre><p>Criamos um link simbólico do nosso arquvio de configuração na pasta <em>/etc/nginx/sites-enabled/*</em>.</p>
-<pre><code>$ ln -s /etc/nginx/sites-available/nosso-app /etc/nginx/sites-enabled/nosso-app
-</code></pre><p>Agora vamos inserir as configuração do nginx</p>
-<pre><code>server {
+<pre><code class="language-bash">$ touch /etc/nginx/sites-available/nosso-app
+</code></pre>
+<p>Criamos um link simbólico do nosso arquvio de configuração na pasta <strong>/etc/nginx/sites-enabled/</strong>.</p>
+<pre><code class="language-bash">$ ln -s /etc/nginx/sites-available/nosso-app /etc/nginx/sites-enabled/nosso-app
+</code></pre>
+<p>Agora vamos inserir as configuração do nginx</p>
+<pre><code class="language-bash">server {
      listen 80; #roda na porta 80
      client_max_body_size 10m; #maximo upload de 10m
 
@@ -219,9 +226,11 @@ env        = ENV_VARIABLE=variable  #variaveis de ambiente
          gzip_disable      &quot;MSIE [1-6]\.(?!.*SV1)&quot;;
      }
 }
-</code></pre><p>Agora podemos reiniciar o serviço <strong>nginx</strong></p>
-<pre><code>$ sudo service nginx restart
-</code></pre><h2>Conclusão</h2><p>Agora você pode acessar o ip ou dominio do seu servidor para ver o seu webapp rodando.</p>
+</code></pre>
+<p>Agora podemos reiniciar o serviço <strong>nginx</strong></p>
+<pre><code class="language-bash">$ sudo service nginx restart
+</code></pre>
+<h2>Conclusão</h2><p>Agora você pode acessar o ip ou dominio do seu servidor para ver o seu webapp rodando.</p>
 
   
 
@@ -306,5 +315,6 @@ env        = ENV_VARIABLE=variable  #variaveis de ambiente
     </section>
 
     <script src="../assets/js/material.min.js" ></script>
+    <script src="../assets/js/prism.js"></script>
   </body>
 </html>

@@ -165,12 +165,14 @@
 <li><p>Abra o aplicativo <strong>Terminal</strong></p>
 </li>
 <li><p>Verifique que seu Celular esta conectado usando o comando:</p>
-<pre><code>$ adb devices
-</code></pre></li>
+<pre><code class="language-bash">$ adb devices
+</code></pre>
+</li>
 <li><p>Agora conecte seu Android Wear (no meu caso o Moto 360) usando os comandos:</p>
-<pre><code>$ adb forward tcp:4444 localabstract:/adb-hub
+<pre><code class="language-bash">$ adb forward tcp:4444 localabstract:/adb-hub
 $ adb connect localhost:4444
-</code></pre></li>
+</code></pre>
+</li>
 <li><p>Verifique que seu Adnroid Wear está conectado. Abra o aplicativo <strong>Android Wear App</strong> e ele deve mostrar que o estatus esta conectado para o <strong>Host</strong> e para o <strong>Target</strong>.</p>
 <p><img src="../assets/img/blog/img/android-wear-app-settings-connected.png" alt="Android Wear App Settings" title="Android Wear App Settings"></p>
 </li>
@@ -178,16 +180,23 @@ $ adb connect localhost:4444
 </li>
 </ol>
 <h2>BONUS TIME</h2><p>Vamos ver com otirar print-screens do nosso Android Wear device.</p>
-<h3>Tirar um print-screen</h3><pre><code>$ adb -s localhost:4444 shell screencap -p /sdcard/DCIM/screen.png
-</code></pre><h3>Mover o print-screen para o seu computador</h3><pre><code>$ adb -s localhost:4444 pull /sdcard/DCIM/
-</code></pre><h3>Apagar o print-screen que está no seu Android Wear Device</h3><pre><code>$ adb -s localhost:4444 shell rm /sdcard/DCIM/screen.png
-</code></pre><h3>Conectar na shell do Android Wear</h3><pre><code>$ adb -s localhost:4444 shell
-</code></pre><p>Agora podemos listar todos os APPs instalados no <strong>moto360</strong>.</p>
-<pre><code>shell@minnow:/ $ pm list packages
-</code></pre><h3>Para desinstalar um aplicativo do seu Android Wear</h3><pre><code>$ pm uninstall [package_name]
-</code></pre><p>Para sair basta usar o comando <strong>exit</strong>.</p>
-<pre><code>shell@minnow:/ $ exit
-</code></pre><p>Pronto agora você já pode começar a cirar sua aplicação para o Android Wear!</p>
+<h3>Tirar um print-screen</h3><pre><code class="language-bash">$ adb -s localhost:4444 shell screencap -p /sdcard/DCIM/screen.png
+</code></pre>
+<h3>Mover o print-screen para o seu computador</h3><pre><code class="language-bash">$ adb -s localhost:4444 pull /sdcard/DCIM/
+</code></pre>
+<h3>Apagar o print-screen que está no seu Android Wear Device</h3><pre><code class="language-bash">$ adb -s localhost:4444 shell rm /sdcard/DCIM/screen.png
+</code></pre>
+<h3>Conectar na shell do Android Wear</h3><pre><code class="language-bash">$ adb -s localhost:4444 shell
+</code></pre>
+<p>Agora podemos listar todos os APPs instalados no <strong>moto360</strong>.</p>
+<pre><code class="language-bash">shell@minnow:/ $ pm list packages
+</code></pre>
+<h3>Para desinstalar um aplicativo do seu Android Wear</h3><pre><code class="language-bash">$ pm uninstall [package_name]
+</code></pre>
+<p>Para sair basta usar o comando <strong>exit</strong>.</p>
+<pre><code class="language-bash">shell@minnow:/ $ exit
+</code></pre>
+<p>Pronto agora você já pode começar a cirar sua aplicação para o Android Wear!</p>
 
   
 
@@ -272,5 +281,6 @@ $ adb connect localhost:4444
     </section>
 
     <script src="../assets/js/material.min.js" ></script>
+    <script src="../assets/js/prism.js"></script>
   </body>
 </html>

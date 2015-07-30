@@ -157,43 +157,53 @@
 <img src="../assets/img/blog/img/intel-edison-stamp.png" alt="Instalando Golang na Intel Edison" title="Instalando Golang na Intel Edison"></p>
 <h2>Golang</h2><p><strong>Go</strong> é uma linguagem de programação criada pela Google e lançada como <a href="https://github.com/golang/go">open source</a> em novembro de 2009. É uma linguagem compilada de programação concorrente com uma sintax semelhante a C.</p>
 <h2>Passos para a instalação do Go na Edison</h2><h3>1. Atualize os pacotes do OPKG</h3><p>Vamos utilizar o vi para inserir os feeds no arquivo base-feeds.conf.</p>
-<pre><code>vi /etc/opkg/base-feeds.conf
-</code></pre><p>Ao abrir o arquivo adicione as seguintes linhas:</p>
-<pre><code>src all http://iotdk.intel.com/repos/1.1/iotdk/all
+<pre><code class="language-bash">$ vi /etc/opkg/base-feeds.conf
+</code></pre>
+<p>Ao abrir o arquivo adicione as seguintes linhas:</p>
+<pre><code class="language-bash">src all http://iotdk.intel.com/repos/1.1/iotdk/all
 src x86 http://iotdk.intel.com/repos/1.1/iotdk/x86
 src i586 http://iotdk.intel.com/repos/1.1/iotdk/i586
-</code></pre><p>Depois atualizamos o OPKG</p>
-<pre><code>$ opkg update
+</code></pre>
+<p>Depois atualizamos o OPKG</p>
+<pre><code class="language-bash">$ opkg update
 $ opkg upgrade
-</code></pre><h3>2. Instale o GIT e o BASH</h3><pre><code>$ opkg install git
+</code></pre>
+<h3>2. Instale o GIT e o BASH</h3><pre><code class="language-bash">$ opkg install git
 $ opkg install bash
-</code></pre><h3>3. Baixe o repositório do Go e execute a instalação</h3><p>Clone o repositório do <a href="https://go.googlesource.com/go">Go</a></p>
-<pre><code>$ git clone https://go.googlesource.com/go
+</code></pre>
+<h3>3. Baixe o repositório do Go e execute a instalação</h3><p>Clone o repositório do <a href="https://go.googlesource.com/go">Go</a></p>
+<pre><code class="language-bash">$ git clone https://go.googlesource.com/go
 $ cd go
 $ git checkout go1.4.1
-</code></pre><p>Faça o <em>build</em></p>
-<pre><code>$ cd src
+</code></pre>
+<p>Faça o <em>build</em></p>
+<pre><code class="language-bash">$ cd src
 $ ./all.bash
-</code></pre><p>Vai demorar um pouco, entre 10 e 20 min.</p>
+</code></pre>
+<p>Vai demorar um pouco, entre 10 e 20 min.</p>
 <p>Depois que terminar o <em>build</em>, se tudo tiver dado certo, você vai ver:</p>
-<pre><code>ALL TESTS PASSED
+<pre><code class="language-bash">ALL TESTS PASSED
 
 ---
 Installed Go for linux/amd64 in /home/you/go.
 Installed commands in /home/you/go/bin.
 *** You need to add /home/you/go/bin to your $PATH. ***
-</code></pre><p>Adicione o <strong>GOROOT</strong> ao <strong>PATH</strong></p>
-<pre><code>$ export GOROOT=/home/root/go
+</code></pre>
+<p>Adicione o <strong>GOROOT</strong> ao <strong>PATH</strong></p>
+<pre><code class="language-bash">$ export GOROOT=/home/root/go
 $ export GOPATH=/usr/root/go
 $ export PATH=$PATH:$GOROOT/bin
-</code></pre><p>Pronto agora você pode começar a usar o <strong>Go</strong> dentro da sua Edison.</p>
+</code></pre>
+<p>Pronto agora você pode começar a usar o <strong>Go</strong> dentro da sua Edison.</p>
 <h2>Utilizando as GPIO&#39;s do Edison</h2><p><img src="../assets/img/blog/img/gopher-intel-edison.png" alt="Instalando Golang na Intel Edison" title="Instalando Golang na Intel Edison">
 Para utilizar as GPIO&#39;s da Edison eu sugiro utilizar o <a href="http://gobot.io/">Gobot</a>. Ele possui um módulo para acessar as GPIO&#39;s de maneira rápida e fácil.</p>
 <p>Crie um arquivo <strong>edison.go</strong>:</p>
-<pre><code>$ touch edison.go
-</code></pre><p>Instale os módulos <strong>Go</strong>:</p>
-<pre><code>$ go get -d -u github.com/hybridgroup/gobot/...
-</code></pre><p>Insira o código:</p>
+<pre><code class="language-bash">$ touch edison.go
+</code></pre>
+<p>Instale os módulos <strong>Go</strong>:</p>
+<pre><code class="language-bash">$ go get -d -u github.com/hybridgroup/gobot/...
+</code></pre>
+<p>Insira o código:</p>
 <pre><code class="language-go">package main
 
 import (
@@ -227,7 +237,7 @@ func main() {
 }&quot;)
 </code></pre>
 <p>Agora rode o código:</p>
-<pre><code>$ go run edison.go
+<pre><code class="language-bash">$ go run edison.go
 </code></pre>
 
   
@@ -313,5 +323,6 @@ func main() {
     </section>
 
     <script src="../assets/js/material.min.js" ></script>
+    <script src="../assets/js/prism.js"></script>
   </body>
 </html>

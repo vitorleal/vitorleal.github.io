@@ -155,10 +155,11 @@
   <h2>Node.js daemon na Intel Edison utilizando Systemctl</h2><p>Vamos ver como manter um serviço <a href="http://nodejs.org/">Node.js</a> rodando sempre que a <a href="https://en.wikipedia.org/wiki/Intel_Edison">Intel Edsion</a> ligar.</p>
 <h2>O que é o Systemctl</h2><p>Neste tutorial nós vamos usar o <a href="https://wiki.archlinux.org/index.php/Systemd">systemctl</a> que é um <em>manager</em> de sistemas e serviços do Linux.</p>
 <h2>O que temos que fazer</h2><p>Primeiro vamos criar um arquivo <strong>.service</strong> dentro da pasta <strong>/lib/systemd/system/</strong>.</p>
-<pre><code>$ touch /lib/systemd/system/{nome-do-seu-servico}.service
-</code></pre><p>Lembre-se de trocar a variavel <code>{nome-do-seu-servico}</code> antes de criar o arquivo.</p>
+<pre><code class="language-bash">$ touch /lib/systemd/system/{nome-do-seu-servico}.service
+</code></pre>
+<p>Lembre-se de trocar a variavel <code>{nome-do-seu-servico}</code> antes de criar o arquivo.</p>
 <p>Agora vamos editar nosso arquivo <strong>.service</strong> e inserir o seguinte conteúdo.</p>
-<pre><code>[Unit]
+<pre><code class="language-bash">[Unit]
 Description=Descrição do seu serviço
 After=mdns.service
 
@@ -169,20 +170,25 @@ RestartSec=10s
 
 Install]
 WantedBy=default.target
-</code></pre><p><strong>Description</strong> - Descrição do service</p>
+</code></pre>
+<p><strong>Description</strong> - Descrição do service</p>
 <p><strong>Restart</strong> - Deve ser <code>always</code> para iniciar o serviço sempre que inicar a Intel Edison</p>
 <p><strong>ExecStart</strong> - Comando que deve ser executado quando inicar, no nosso caso rodar um arquivo Node.js</p>
 <p>Pronto agora ao reiniciar a <strong>Intel Edison</strong> seu serviço vai iniciar automaticamente.</p>
 <h2>Comandos systemctl</h2><p>Para permitir que o serviço inicie no reboot da maquina:</p>
-<pre><code>$ systemctl enable {nome-do-seu-servico}
-</code></pre><p>Para iniciar o serviço utilize o comando:</p>
-<pre><code>$ systemctl start {nome-do-seu-servico}
-</code></pre><p>Para parar o serviço utilize o comando:</p>
-<pre><code>$ systemctl stop {nome-do-seu-servico}
-</code></pre><p>Para reiniciar o serviço utilize o comando:</p>
-<pre><code>$ systemctl restart {nome-do-seu-servico}
-</code></pre><p>Para verificar o status do serviço utilize o comando:</p>
-<pre><code>$ systemctl status {nome-do-seu-servico}
+<pre><code class="language-bash">$ systemctl enable {nome-do-seu-servico}
+</code></pre>
+<p>Para iniciar o serviço utilize o comando:</p>
+<pre><code class="language-bash">$ systemctl start {nome-do-seu-servico}
+</code></pre>
+<p>Para parar o serviço utilize o comando:</p>
+<pre><code class="language-bash">$ systemctl stop {nome-do-seu-servico}
+</code></pre>
+<p>Para reiniciar o serviço utilize o comando:</p>
+<pre><code class="language-bash">$ systemctl restart {nome-do-seu-servico}
+</code></pre>
+<p>Para verificar o status do serviço utilize o comando:</p>
+<pre><code class="language-bash">$ systemctl status {nome-do-seu-servico}
 </code></pre>
 
   
@@ -268,5 +274,6 @@ WantedBy=default.target
     </section>
 
     <script src="../assets/js/material.min.js" ></script>
+    <script src="../assets/js/prism.js"></script>
   </body>
 </html>

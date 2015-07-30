@@ -154,16 +154,18 @@
 
   <h2>Adicionando Google Maps V2 em um projeto Android</h2><p>Vamos ver como inserir o <a href="https://developers.google.com/maps/documentation/android/">Google Maps V2</a> em um projeto Android.</p>
 <h2>Adicionando as permissões no <strong>AndroidManifest</strong></h2><p>Antes de mais nada vamos adicioanr as permissões nescessárias, <a href="https://developer.android.com/guide/topics/manifest/uses-permission-element.html">uses-permission</a>, ao nosso arquivo <strong>AndroidManifest.xml</strong> dentro da tag <a href="https://developer.android.com/guide/topics/manifest/manifest-element.html"><manifest></manifest></a>.</p>
-<pre><code>    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
+<pre><code class="language-bash">    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
     &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;
     &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&gt;
     &lt;!-- Esses dois não são obrigatórios para a V2 do Google Maps mais são recomendados --&gt;
     &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot;/&gt;
     &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;
-</code></pre><h2>Adicionar o Google Play service no seu aplicativo dentro da tag <strong><application></application></strong></h2><pre><code>&lt;meta-data
+</code></pre>
+<h2>Adicionar o Google Play service no seu aplicativo dentro da tag <strong><application></application></strong></h2><pre><code class="language-bash">&lt;meta-data
     android:name=&quot;com.google.android.gms.version&quot;
     android:value=&quot;@integer/google_play_services_version&quot; /&gt;
-</code></pre><h2>Vamos criar um certificado para utilizar a API do Google Maps V2</h2><ol>
+</code></pre>
+<h2>Vamos criar um certificado para utilizar a API do Google Maps V2</h2><ol>
 <li><p>Entre no <a href="https://console.developers.google.com">Google Developer Console</a></p>
 </li>
 <li><p>Dentro do seu projeto clique em <strong>APIs</strong> no menu esquerdo e habilite o <strong>Google Maps Android API v2</strong></p>
@@ -171,8 +173,9 @@
 </li>
 <li><p>Pegue o certificado <strong>SHA1</strong> de desenvolvimento para gerar sua API Key</p>
 <p>Digite no terminal:</p>
-<pre><code>$ keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
-</code></pre></li>
+<pre><code class="language-bash">$ keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+</code></pre>
+</li>
 <li><p>Agora no menu esquerdo vá em <strong>Credentials</strong> e crie uma nova chave de API para Android</p>
 <p><img src="../assets/img/blog/img/android-map-google-console-api-key.png" alt="Google Developer Console - API Key" title="Google Developer Console - API Key"></p>
 </li>
@@ -180,17 +183,19 @@
 <p><img src="../assets/img/blog/img/android-maps-sha1.png" alt="Google Developer Console - SHA1" title="Google Developer Console - SHA1"></p>
 </li>
 <li><p>Adicione a <strong>API Key</strong> no <strong>AndoirManifest</strong></p>
-<pre><code>&lt;meta-data
+<pre><code class="language-bash">&lt;meta-data
  android:name=&quot;com.google.android.maps.v2.API_KEY&quot;
  android:value=&quot;COLOQUE_AQUI_SUA_API_KEY&quot;/&gt;
-</code></pre></li>
+</code></pre>
+</li>
 </ol>
-<h2>Adicione o mapa na sua activity</h2><pre><code>&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+<h2>Adicione o mapa na sua activity</h2><pre><code class="language-bash">&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     android:id=&quot;@+id/map&quot;
     android:layout_width=&quot;match_parent&quot;
     android:layout_height=&quot;match_parent&quot;
     android:name=&quot;com.google.android.gms.maps.MapFragment&quot;/&gt;
-</code></pre><p>Pronto agora já é só compilar o projeto e temos nosso mapa na Activity principal.</p>
+</code></pre>
+<p>Pronto agora já é só compilar o projeto e temos nosso mapa na Activity principal.</p>
 <p><img src="../assets/img/blog/img/android-maps.png" alt="Google Maps V2" title="Google Maps V2"></p>
 
   
@@ -276,5 +281,6 @@
     </section>
 
     <script src="../assets/js/material.min.js" ></script>
+    <script src="../assets/js/prism.js"></script>
   </body>
 </html>
