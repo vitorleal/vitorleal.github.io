@@ -20,17 +20,17 @@
       </header>
       <% } %>
 
-      <div class="mdl-card__title">
-        <a href="<%= base %>blog/<%= post %>">
-          <h4 class="mdl-card__title-text"><%= data[post].title %></h4>
-        </a>
-      </div>
-
       <div class="mdl-card__time">
         <time datetime="<%= data[post].date %>" <% if (data[post].pubdate) { %>pubdate="<%= data[post].pubdate %>"<% } %>>
           <% var date = new Date(data[post].date); %>
           <%= date.getDate() %>/<%= date.getMonth() + 1 %>/<%= date.getFullYear() %>
         </time>
+      </div>
+
+      <div class="mdl-card__title">
+        <a href="<%= base %>blog/<%= post %>">
+          <h4 class="mdl-card__title-text"><%= data[post].title %></h4>
+        </a>
       </div>
 
       <div class="mdl-card__supporting-text">
