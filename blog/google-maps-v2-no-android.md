@@ -6,7 +6,7 @@ Vamos ver como inserir o [Google Maps V2](https://developers.google.com/maps/doc
 
 Antes de mais nada vamos adicioanr as permissões nescessárias, [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html), ao nosso arquivo **AndroidManifest.xml** dentro da tag [<manifest>](https://developer.android.com/guide/topics/manifest/manifest-element.html).
 
-```
+```bash
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -17,7 +17,7 @@ Antes de mais nada vamos adicioanr as permissões nescessárias, [uses-permissio
 
 ## Adicionar o Google Play service no seu aplicativo dentro da tag **<application>**
 
-```
+```bash
 <meta-data
     android:name="com.google.android.gms.version"
     android:value="@integer/google_play_services_version" />
@@ -34,7 +34,7 @@ Antes de mais nada vamos adicioanr as permissões nescessárias, [uses-permissio
   3. Pegue o certificado **SHA1** de desenvolvimento para gerar sua API Key
 
   Digite no terminal:
-  ```
+  ```bash
   $ keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
   ```
 
@@ -48,7 +48,7 @@ Antes de mais nada vamos adicioanr as permissões nescessárias, [uses-permissio
 
   6. Adicione a **API Key** no **AndoirManifest**
 
-  ```
+  ```bash
   <meta-data
       android:name="com.google.android.maps.v2.API_KEY"
       android:value="COLOQUE_AQUI_SUA_API_KEY"/>
@@ -56,7 +56,7 @@ Antes de mais nada vamos adicioanr as permissões nescessárias, [uses-permissio
 
 ## Adicione o mapa na sua activity
 
-```
+```bash
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/map"
     android:layout_width="match_parent"

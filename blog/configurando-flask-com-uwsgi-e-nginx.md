@@ -11,7 +11,7 @@ O Flask é um microframework para desenvolvimento web criado em Python. Super le
 ## Instalando o Nginx e o UWSGI no servidor
 Para instalar o Ngin e o UWSGI vamos utilizar o **apt-get**.
 
-```
+```bash
 $ apt-get install uwsgi uwsgi-plugin-python nginx
 ```
 
@@ -19,25 +19,25 @@ $ apt-get install uwsgi uwsgi-plugin-python nginx
 ## Configurando o UWSGI
 Primeiro vamos crair o arquivo de configuração do **uwsgi** do nosso nosso webapp.
 
-```
+```bash
 $ touch /etc/uwsgi/apps-available/nosso-app.ini
 ```
 
-Criamos um link simbólico do nosso arquvio de configuração na pasta */etc/uwsgi/apps-enabled/**.
+Criamos um link simbólico do nosso arquvio de configuração na pasta **etc/uwsgi/apps-enabled/**.
 
-```
+```bash
 $ ln -s /etc/uwsgi/apps-available/nosso-app.ini /etc/uwsgi/apps-enabled/nosso-app.ini
 ```
 
 Criamos o arquivo **.sock**
 
-```
+```bash
 $ touch /tmp/nosso-app.sock
 ```
 
 Agora vamos inserir os dados de configuração do nosso app.
 
-```
+```bash
 [uwsgi]
 vhost      = true
 master     = true
@@ -56,29 +56,28 @@ env        = ENV_VARIABLE=variable  #variaveis de ambiente
 
 Já podemos reiniciar o nosso serviço **uwsgi**
 
-```
+```bash
 $ sudo service uwsgi restart
 ```
 
-****
 
 ## Configurando o Nginx
 
 Primeiro vamos crair o arquivo de configuração **nginx** do nosso webapp.
 
-```
+```bash
 $ touch /etc/nginx/sites-available/nosso-app
 ```
 
-Criamos um link simbólico do nosso arquvio de configuração na pasta */etc/nginx/sites-enabled/**.
+Criamos um link simbólico do nosso arquvio de configuração na pasta **/etc/nginx/sites-enabled/**.
 
-```
+```bash
 $ ln -s /etc/nginx/sites-available/nosso-app /etc/nginx/sites-enabled/nosso-app
 ```
 
 Agora vamos inserir as configuração do nginx
 
-```
+```bash
 server {
      listen 80; #roda na porta 80
      client_max_body_size 10m; #maximo upload de 10m
@@ -114,7 +113,7 @@ server {
 
 Agora podemos reiniciar o serviço **nginx**
 
-```
+```bash
 $ sudo service nginx restart
 ```
 

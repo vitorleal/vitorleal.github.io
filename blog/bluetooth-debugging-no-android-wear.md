@@ -30,12 +30,12 @@ Abra o aplicativo **Android Wear App**, vá em **Settings** e habilete a opção
   1. Abra o aplicativo **Terminal**
 
   2. Verifique que seu Celular esta conectado usando o comando:
-  ```
+  ```bash
   $ adb devices
   ```
 
   3. Agora conecte seu Android Wear (no meu caso o Moto 360) usando os comandos:
-  ```
+  ```bash
   $ adb forward tcp:4444 localabstract:/adb-hub
   $ adb connect localhost:4444
   ```
@@ -51,39 +51,39 @@ Abra o aplicativo **Android Wear App**, vá em **Settings** e habilete a opção
 Vamos ver com otirar print-screens do nosso Android Wear device.
 
 ### Tirar um print-screen
-```
+```bash
 $ adb -s localhost:4444 shell screencap -p /sdcard/DCIM/screen.png
 ```
 
 ### Mover o print-screen para o seu computador
-```
+```bash
 $ adb -s localhost:4444 pull /sdcard/DCIM/
 ```
 
 ### Apagar o print-screen que está no seu Android Wear Device
-```
+```bash
 $ adb -s localhost:4444 shell rm /sdcard/DCIM/screen.png
 ```
 
 ### Conectar na shell do Android Wear
-```
+```bash
 $ adb -s localhost:4444 shell
 ```
 
 Agora podemos listar todos os APPs instalados no **moto360**.
-```
+```bash
 shell@minnow:/ $ pm list packages
 ```
 
 ### Para desinstalar um aplicativo do seu Android Wear
-```
+```bash
 $ pm uninstall [package_name]
 ```
 
 Para sair basta usar o comando **exit**.
-```
+```bash
 shell@minnow:/ $ exit
 ```
 
-
 Pronto agora você já pode começar a cirar sua aplicação para o Android Wear!
+

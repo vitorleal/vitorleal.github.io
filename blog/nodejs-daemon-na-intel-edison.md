@@ -12,7 +12,7 @@ Neste tutorial nós vamos usar o [systemctl](https://wiki.archlinux.org/index.ph
 
 Primeiro vamos criar um arquivo **.service** dentro da pasta **/lib/systemd/system/**.
 
-```
+```bash
 $ touch /lib/systemd/system/{nome-do-seu-servico}.service
 ```
 
@@ -21,7 +21,7 @@ Lembre-se de trocar a variavel ```{nome-do-seu-servico}``` antes de criar o arqu
 
 Agora vamos editar nosso arquivo **.service** e inserir o seguinte conteúdo.
 
-```
+```bash
 [Unit]
 Description=Descrição do seu serviço
 After=mdns.service
@@ -48,31 +48,31 @@ Pronto agora ao reiniciar a **Intel Edison** seu serviço vai iniciar automatica
 
 Para permitir que o serviço inicie no reboot da maquina:
 
-```
+```bash
 $ systemctl enable {nome-do-seu-servico}
 ```
 
 Para iniciar o serviço utilize o comando:
 
-```
+```bash
 $ systemctl start {nome-do-seu-servico}
 ```
 
 Para parar o serviço utilize o comando:
 
-```
+```bash
 $ systemctl stop {nome-do-seu-servico}
 ```
 
 Para reiniciar o serviço utilize o comando:
 
-```
+```bash
 $ systemctl restart {nome-do-seu-servico}
 ```
 
 Para verificar o status do serviço utilize o comando:
 
-```
+```bash
 $ systemctl status {nome-do-seu-servico}
 ```
 

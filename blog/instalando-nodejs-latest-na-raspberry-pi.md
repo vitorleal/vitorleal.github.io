@@ -6,36 +6,36 @@ A versão que está disponibilizada no apt-get por padrão é muito antiga, muit
 
 Para instalar esta versão basta executar o comando:
 
-```
-apt-get install nodejs
+```bash
+$ apt-get install nodejs
 ```
 
 ## Instalando o Node.js Latest (0.12.*)
 
 ##### Primeiro vamos fazer o download do **tar.gz** do Node.js latest:
 
-```
-wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+```bash
+$ wget http://node-arm.herokuapp.com/node_latest_armhf.deb
 ```
 
 ##### Agora vamos iniciar a instalação:
 
-```
-sudo dpkg -i node_latest_armhf.deb
+```bash
+$ sudo dpkg -i node_latest_armhf.deb
 ```
 
 ## Testando a versão do Node.js e do NPM
 
 Para verificar a versão do Node.js basta executar o comando:
 
-```
-node -v
+```bash
+$ node -v
 ```
 
 deve responder algo como **v0.12.xx**
 
-```
-npm -v
+```bash
+$ npm -v
 ```
 
 deve responder algo como **2.5.1**

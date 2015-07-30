@@ -17,13 +17,13 @@ A **Intel Edison** possui um processador Intel® Atom™dual core de **500 MHz**
 
 Vamos utilizar o vi para inserir os feeds no arquivo base-feeds.conf.
 
-```
-vi /etc/opkg/base-feeds.conf
+```bash
+$ vi /etc/opkg/base-feeds.conf
 ```
 
 Ao abrir o arquivo adicione as seguintes linhas:
 
-```
+```bash
 src all http://iotdk.intel.com/repos/1.1/iotdk/all
 src x86 http://iotdk.intel.com/repos/1.1/iotdk/x86
 src i586 http://iotdk.intel.com/repos/1.1/iotdk/i586
@@ -31,14 +31,14 @@ src i586 http://iotdk.intel.com/repos/1.1/iotdk/i586
 
 Depois atualizamos o OPKG
 
-```
+```bash
 $ opkg update
 $ opkg upgrade
 ```
 
 ### 2. Instale o GIT e o BASH
 
-```
+```bash
 $ opkg install git
 $ opkg install bash
 ```
@@ -47,7 +47,7 @@ $ opkg install bash
 
 Clone o repositório do [Go](https://go.googlesource.com/go)
 
-```
+```bash
 $ git clone https://go.googlesource.com/go
 $ cd go
 $ git checkout go1.4.1
@@ -55,7 +55,7 @@ $ git checkout go1.4.1
 
 Faça o *build*
 
-```
+```bash
 $ cd src
 $ ./all.bash
 ```
@@ -63,7 +63,7 @@ Vai demorar um pouco, entre 10 e 20 min.
 
 Depois que terminar o *build*, se tudo tiver dado certo, você vai ver:
 
-```
+```bash
 ALL TESTS PASSED
 
 ---
@@ -74,7 +74,7 @@ Installed commands in /home/you/go/bin.
 
 Adicione o **GOROOT** ao **PATH**
 
-```
+```bash
 $ export GOROOT=/home/root/go
 $ export GOPATH=/usr/root/go
 $ export PATH=$PATH:$GOROOT/bin
@@ -89,13 +89,13 @@ Para utilizar as GPIO's da Edison eu sugiro utilizar o [Gobot](http://gobot.io/)
 
 Crie um arquivo **edison.go**:
 
-```
+```bash
 $ touch edison.go
 ```
 
 Instale os módulos **Go**:
 
-```
+```bash
 $ go get -d -u github.com/hybridgroup/gobot/...
 ```
 
@@ -137,7 +137,7 @@ func main() {
 
 Agora rode o código:
 
-```
+```bash
 $ go run edison.go
 ```
 
