@@ -7,7 +7,7 @@ dasherize  = $(shell echo $(strip $(1)) | tr ' [A-Z]-' '-[a-z]-')
 createPost = $(shell sed 's/{TITLE}/$(strip $(2))/g' "blog/_template.md" > "blog/$(strip $(1)).md")
 
 deploy:
-	make clean > /dev/null
+	make clean
 
 	$(call print, "Compile site")
 	harp compile
@@ -29,7 +29,7 @@ deploy:
 	git checkout source
 
 clean:
-	rm -rf www > /dev/null
+	rm -rf www
 
 new:
 ifeq ($(post),)
