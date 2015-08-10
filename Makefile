@@ -29,7 +29,7 @@ deploy:
 	git checkout source
 
 clean:
-	rm -rf www
+	rm -rf www > /dev/null
 
 new:
 ifeq ($(post),)
