@@ -9,7 +9,7 @@
         <% menu.forEach(function (item) { %>
         <a class="mdl-navigation__link mdl-typography--text-uppercase
           <% if (menuActive === item.title) { %>active<% } %>"
-          href="<%= base %><%= item.link %>">
+          href="<%= url %><%= item.link %>">
           <%= item.title %>
         </a>
         <% }); %>
@@ -21,7 +21,7 @@
 <div class="android-drawer mdl-layout__drawer">
   <nav class="mdl-navigation">
     <% menu.forEach(function (item) { %>
-    <a class="mdl-navigation__link" href="<%= base %><%= item.link %>">
+    <a class="mdl-navigation__link" href="<%= url %><%= item.link %>">
       <%= item.title %>
     </a>
     <% }); %>
