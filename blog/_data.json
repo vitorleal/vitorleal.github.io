@@ -5,13 +5,22 @@
     "description": "Lista de posts sobre programação, hardware, palestras, eventos, internet of things e outros interesses"
   },
 
+  "introducao-ao-docker": {
+    "base": "../",
+    "title": "Introdução ao Docker",
+    "date": "2015-10-05 10:30",
+    "categories": ["docker", "desenvolvimento"],
+    "img": "/assets/img/blog/docker.png",
+    "description": "Introdução ao desenvolviemento de micro-serviços utilizando Docker",
+    "speakerdeck": "b0d0282e0c7842ce8841dd13730d38c4"
+  },
   "entrevista-na-campus-party-recife-2015-sobre-internet-das-coisas": {
     "base": "../",
     "title": "Entrevista na Campus Party Recife 2015 sobre Internet das Coisas e Wearables",
     "date": "2015-07-24 10:56",
     "categories": ["nodejs", "iot", "desenvolvimento", "wearable"],
     "img": "/assets/img/blog/entrevista-campus-party-recife-2015.png",
-    "description": "Vitor Leal, do Centro de Inovação Telefônica Vivo, conta um pouco sobre smart cities, wearables e a Hackathon. "
+    "description": "Vitor Leal, do Centro de Inovação Telefônica Vivo, conta um pouco sobre smart cities, wearables e a Hackathon"
   },
   "nodejs-daemon-na-intel-edison": {
     "base": "../",
